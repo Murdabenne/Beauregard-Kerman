@@ -67,18 +67,18 @@ GAME
 			BypassEntryPurchaseAfterResearch = True
 			AllowStockVessels = False
 			IndestructibleFacilities = False
-			ResourceAbundance = 1
+			ResourceAbundance = 1.2
 			ReentryHeatScale = 1
 		}
 		CAREER
 		{
 			TechTreeUrl = GameData\ModuleManager.TechTree
-			StartingFunds = 25000
-			StartingScience = 0
-			StartingReputation = 0
-			FundsGainMultiplier = 1
+			StartingFunds = 25000000
+			StartingScience = 25000
+			StartingReputation = 1000
+			FundsGainMultiplier = 5
 			RepGainMultiplier = 1
-			ScienceGainMultiplier = 1
+			ScienceGainMultiplier = 5
 			FundsLossMultiplier = 1
 			RepLossMultiplier = 1
 		}
@@ -253,7 +253,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 25000
+		funds = 25000000
 	}
 	SCENARIO
 	{
@@ -275,7 +275,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 0
+		sci = 25000
 		Tech
 		{
 			id = start
@@ -1628,16 +1628,6 @@ GAME
 				}
 				profession
 				{
-					current = Scientist
-				}
-			}
-			KerbalExt
-			{
-				experience
-				{
-				}
-				profession
-				{
 					current = Pilot
 				}
 			}
@@ -1670,8 +1660,7 @@ GAME
 			Bill Kerman = M GENERIC GENERIC
 			Bob Kerman = M GENERIC GENERIC
 			Valentina Kerman = F GENERIC GENERIC
-			Tanma Kerman = F GENERIC GENERIC
-			Seanfry Kerman = M GENERIC GENERIC
+			Beauregard Kerman = M GENERIC GENERIC
 		}
 		ClassSuits
 		{
@@ -1729,8 +1718,8 @@ GAME
 			name = Jebediah Kerman
 			gender = Male
 			type = Crew
-			brave = 0.5
-			dumb = 0.5
+			brave = 0.9
+			dumb = 0.1
 			badS = True
 			tour = False
 			state = Available
@@ -1750,9 +1739,9 @@ GAME
 			name = Bill Kerman
 			gender = Male
 			type = Crew
-			brave = 0.5
-			dumb = 0.8
-			badS = False
+			brave = 0.9
+			dumb = 0.1
+			badS = True
 			tour = False
 			state = Available
 			ToD = 0
@@ -1771,9 +1760,9 @@ GAME
 			name = Bob Kerman
 			gender = Male
 			type = Crew
-			brave = 0.3
+			brave = 0.9
 			dumb = 0.1
-			badS = False
+			badS = True
 			tour = False
 			state = Available
 			ToD = 0
@@ -1792,8 +1781,8 @@ GAME
 			name = Valentina Kerman
 			gender = Female
 			type = Crew
-			brave = 0.55
-			dumb = 0.4
+			brave = 0.9
+			dumb = 0.1
 			badS = True
 			tour = False
 			state = Available
@@ -1810,33 +1799,12 @@ GAME
 		}
 		KERBAL
 		{
-			name = Tanma Kerman
-			gender = Female
-			type = Unowned
-			brave = 0.5331646
-			dumb = 0.129368
-			badS = False
-			tour = False
-			state = Available
-			ToD = 0
-			idx = -1
-			CAREER_LOG
-			{
-				flight = 0
-			}
-			FLIGHT_LOG
-			{
-				flight = 0
-			}
-		}
-		KERBAL
-		{
-			name = Seanfry Kerman
+			name = Beauregard Kerman
 			gender = Male
-			type = Unowned
-			brave = 0.8159291
-			dumb = 0.8602358
-			badS = False
+			type = Crew
+			brave = 0.99
+			dumb = 0.01
+			badS = True
 			tour = False
 			state = Available
 			ToD = 0
