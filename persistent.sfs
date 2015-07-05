@@ -1,0 +1,1858 @@
+GAME
+{
+	version = 1.0.4
+	Title = Beauregard Kerman (CAREER)
+	Description = No description available.
+	linkURL = 
+	linkCaption = 
+	Mode = CAREER
+	Status = 1
+	scene = 5
+	editor = None
+	flag = Squad/Flags/NASA
+	launchID = 1
+	PARAMETERS
+	{
+		preset = Normal
+		FLIGHT
+		{
+			CanQuickSave = True
+			CanQuickLoad = True
+			CanAutoSave = True
+			CanUseMap = True
+			CanSwitchVesselsNear = True
+			CanSwitchVesselsFar = True
+			CanTimeWarpHigh = True
+			CanTimeWarpLow = True
+			CanEVA = True
+			CanIVA = True
+			CanBoard = True
+			CanRestart = True
+			CanLeaveToEditor = True
+			CanLeaveToTrackingStation = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+		}
+		EDITOR
+		{
+			CanSave = True
+			CanLoad = True
+			CanStartNew = True
+			CanLaunch = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+			startUpMode = 0
+			craftFileToLoad = 
+		}
+		TRACKINGSTATION
+		{
+			CanFlyVessel = True
+			CanAbortVessel = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+		}
+		SPACECENTER
+		{
+			CanGoInVAB = True
+			CanGoInSPH = True
+			CanGoInTrackingStation = True
+			CanLaunchAtPad = True
+			CanLaunchAtRunway = True
+			CanLeaveToMainMenu = True
+		}
+		DIFFICULTY
+		{
+			AutoHireCrews = False
+			MissingCrewsRespawn = True
+			BypassEntryPurchaseAfterResearch = True
+			AllowStockVessels = False
+			IndestructibleFacilities = False
+			ResourceAbundance = 1
+			ReentryHeatScale = 1
+		}
+		CAREER
+		{
+			TechTreeUrl = GameData\ModuleManager.TechTree
+			StartingFunds = 25000
+			StartingScience = 0
+			StartingReputation = 0
+			FundsGainMultiplier = 1
+			RepGainMultiplier = 1
+			ScienceGainMultiplier = 1
+			FundsLossMultiplier = 1
+			RepLossMultiplier = 1
+		}
+	}
+	SCENARIO
+	{
+		name = ContractSystem
+		scene = 7, 8, 5, 6
+		update = 0.08
+		CONTRACTS
+		{
+			CONTRACT
+			{
+				guid = 2b73b01e-57d2-4d0c-bb11-d815cec9a14f
+				type = RecordTrackContract
+				prestige = 0
+				seed = -256599072
+				state = Active
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				autoAccept = True
+				values = 0,0,0,3467.88984417915,0,0,1.09,0,0,0.08,0,0
+				trackType = SPEED
+				trackValue = 150
+				PARAM
+				{
+					name = RecordTrackingParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					trackType = SPEED
+					trackValue = 150
+				}
+			}
+			CONTRACT
+			{
+				guid = eb992f4d-3964-4167-8e34-adeb946413fc
+				type = RecordTrackContract
+				prestige = 0
+				seed = -256599047
+				state = Active
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				autoAccept = True
+				values = 0,0,0,2889.90820348263,0,0,1.09,0,0,0.08,0,0
+				trackType = DISTANCE
+				trackValue = 5000
+				PARAM
+				{
+					name = RecordTrackingParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					trackType = DISTANCE
+					trackValue = 5000
+				}
+			}
+			CONTRACT
+			{
+				guid = d870192e-c221-4c52-9306-d865a00f2588
+				type = WorldFirstContract
+				prestige = 0
+				seed = -256599044
+				state = Offered
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = Floating
+				values = 86400,0,2018.3485865593,5321.10081911087,2200,1,2.18,0,86400.08,0,0,0
+				targetBody = 1
+				targetType = FIRSTLAUNCH
+				PARAM
+				{
+					name = ProgressTrackingParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					targetBody = 1
+					targetType = FIRSTLAUNCH
+				}
+			}
+			CONTRACT
+			{
+				guid = 286c236d-4bc2-4551-993d-f6d618c64746
+				type = RecordTrackContract
+				prestige = 0
+				seed = -256599031
+				state = Active
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				autoAccept = True
+				values = 0,0,0,2889.90820348263,0,0,1.09,0,0,0.08,0,0
+				trackType = ALTITUDE
+				trackValue = 3500
+				PARAM
+				{
+					name = RecordTrackingParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					trackType = ALTITUDE
+					trackValue = 3500
+				}
+			}
+			CONTRACT
+			{
+				guid = a9324761-22d8-4b06-9600-56d956e656f7
+				type = WorldFirstContract
+				prestige = 1
+				seed = -256599023
+				state = Offered
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = Floating
+				values = 64800,0,23305.0836622715,61440.6751096249,27500,10,23.6,0,64800.08,0,0,0
+				targetBody = 1
+				targetType = SCIENCE
+				PARAM
+				{
+					name = ProgressTrackingParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					targetBody = 1
+					targetType = SCIENCE
+				}
+			}
+			CONTRACT
+			{
+				guid = 6ec3234e-0b4f-4527-8b58-7d3fa2ba78c3
+				type = WorldFirstContract
+				prestige = 1
+				seed = -256599009
+				state = Offered
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = Floating
+				values = 86400,0,18644.0669298172,49152.5400876999,22000,8,18.88,0,86400.08,0,0,0
+				targetBody = 1
+				targetType = REACHSPACE
+				PARAM
+				{
+					name = ProgressTrackingParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					targetBody = 1
+					targetType = REACHSPACE
+				}
+			}
+			CONTRACT
+			{
+				guid = d99b94b5-8e1b-48e1-a8ac-b8878161fa4b
+				type = WorldFirstContract
+				prestige = 2
+				seed = -256598999
+				state = Offered
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = Floating
+				values = 86400,0,25984.2513799667,68503.9354562759,33000,12,30.48,0,86400.08,0,0,0
+				targetBody = 1
+				targetType = ORBIT
+				PARAM
+				{
+					name = ProgressTrackingParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					targetBody = 1
+					targetType = ORBIT
+				}
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = Funding
+		scene = 7, 8, 5, 6
+		funds = 25000
+	}
+	SCENARIO
+	{
+		name = ScenarioNewGameIntro
+		scene = 5, 6, 8
+		kscComplete = True
+		editorComplete = False
+		tsComplete = False
+	}
+	SCENARIO
+	{
+		name = ProgressTracking
+		scene = 7, 8, 5
+		Progress
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = ResearchAndDevelopment
+		scene = 7, 8, 5, 6
+		sci = 0
+		Tech
+		{
+			id = start
+			state = Available
+			cost = 0
+			part = NBprobeCone1m
+			part = basicFin
+			part = mk1pod
+			part = solidBooster.sm
+			part = GooExperiment
+			part = trussPiece1x
+			part = parachuteSingle
+		}
+	}
+	SCENARIO
+	{
+		name = VesselRecovery
+		scene = 5, 7, 8, 6
+	}
+	SCENARIO
+	{
+		name = Reputation
+		scene = 7, 8, 5, 6
+		rep = 0
+	}
+	SCENARIO
+	{
+		name = StrategySystem
+		scene = 7, 8, 5, 6
+		STRATEGIES
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioDestructibles
+		scene = 5, 7, 6, 8
+		SpaceCenter/VehicleAssemblyBuilding/Facility/VAB2
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/OuterDish
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/Building
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/ForeverAlone
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/MissionControl/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/Flag
+		{
+			intact = True
+		}
+		SpaceCenter/AstronautComplex/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/FlagPole/Facility
+		{
+			intact = True
+		}
+		SpaceCenter/Administration/Facility/Building
+		{
+			intact = True
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioDiscoverableObjects
+		scene = 7, 8, 5
+		lastSeed = 0
+		sizeCurve
+		{
+			key = 0 0 1.5 1.5
+			key = 0.3 0.45 0.875 0.875
+			key = 0.7 0.55 0.875 0.875
+			key = 1 1 1.5 1.5
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioUpgradeableFacilities
+		scene = 5, 6, 7, 8
+		SpaceCenter/LaunchPad
+		{
+			lvl = 0
+		}
+		SpaceCenter/Runway
+		{
+			lvl = 0
+		}
+		SpaceCenter/VehicleAssemblyBuilding
+		{
+			lvl = 0
+		}
+		SpaceCenter/SpaceplaneHangar
+		{
+			lvl = 0
+		}
+		SpaceCenter/TrackingStation
+		{
+			lvl = 0
+		}
+		SpaceCenter/AstronautComplex
+		{
+			lvl = 0
+		}
+		SpaceCenter/MissionControl
+		{
+			lvl = 0
+		}
+		SpaceCenter/ResearchAndDevelopment
+		{
+			lvl = 0
+		}
+		SpaceCenter/Administration
+		{
+			lvl = 0
+		}
+		SpaceCenter/FlagPole
+		{
+			lvl = 0
+		}
+	}
+	SCENARIO
+	{
+		name = ContractPreLoader
+		scene = 7, 8, 5
+	}
+	SCENARIO
+	{
+		name = BiomeTracker
+		scene = 7, 8, 5
+		CELESTIAL_BODY
+		{
+			body = Kerbin
+			version = 2
+			BIOME
+			{
+				name = Grasslands
+				landCount = 1256
+				waterCount = 14
+				LAND_LOCATION
+				{
+					lat = 68.9501953125
+					lon = 85.9130859375
+				}
+				LAND_LOCATION
+				{
+					lat = 47.9443359375
+					lon = 171.7822265625
+				}
+				LAND_LOCATION
+				{
+					lat = 62.7978515625
+					lon = 257.6513671875
+				}
+				WATER_LOCATION
+				{
+					lat = 8.1298828125
+					lon = 85.9130859375
+				}
+				WATER_LOCATION
+				{
+					lat = -20.0830078125
+					lon = 171.7822265625
+				}
+				WATER_LOCATION
+				{
+					lat = -9.6240234375
+					lon = 343.5205078125
+				}
+			}
+			BIOME
+			{
+				name = Highlands
+				landCount = 29868
+				waterCount = 3
+				LAND_LOCATION
+				{
+					lat = 26.9384765625
+					lon = 85.9130859375
+				}
+				LAND_LOCATION
+				{
+					lat = 62.7978515625
+					lon = 171.7822265625
+				}
+				LAND_LOCATION
+				{
+					lat = 65.6982421875
+					lon = 257.6513671875
+				}
+				WATER_LOCATION
+				{
+					lat = -22.7197265625
+					lon = 59.3701171875
+				}
+				WATER_LOCATION
+				{
+					lat = 42.4951171875
+					lon = 250.8837890625
+				}
+				WATER_LOCATION
+				{
+					lat = -15.7763671875
+					lon = 49.3505859375
+				}
+			}
+			BIOME
+			{
+				name = Mountains
+				landCount = 3147
+				waterCount = 5
+				LAND_LOCATION
+				{
+					lat = -36.0791015625
+					lon = 85.9130859375
+				}
+				LAND_LOCATION
+				{
+					lat = -57.0849609375
+					lon = 343.5205078125
+				}
+				LAND_LOCATION
+				{
+					lat = 17.8857421875
+					lon = 69.3896484375
+				}
+				WATER_LOCATION
+				{
+					lat = -8.4814453125
+					lon = 138.7353515625
+				}
+				WATER_LOCATION
+				{
+					lat = -24.1259765625
+					lon = 141.9873046875
+				}
+				WATER_LOCATION
+				{
+					lat = -31.2451171875
+					lon = 98.9208984375
+				}
+			}
+			BIOME
+			{
+				name = Water
+				landCount = 12
+				waterCount = 2465
+				LAND_LOCATION
+				{
+					lat = -75.9814453125
+					lon = 85.9130859375
+				}
+				LAND_LOCATION
+				{
+					lat = -71.1474609375
+					lon = 171.7822265625
+				}
+				LAND_LOCATION
+				{
+					lat = -73.8720703125
+					lon = 257.6513671875
+				}
+				WATER_LOCATION
+				{
+					lat = -57.0849609375
+					lon = 85.9130859375
+				}
+				WATER_LOCATION
+				{
+					lat = 26.9384765625
+					lon = 171.7822265625
+				}
+				WATER_LOCATION
+				{
+					lat = 47.9443359375
+					lon = 257.6513671875
+				}
+			}
+			BIOME
+			{
+				name = IceCaps
+				landCount = 2780
+				waterCount = 5
+				LAND_LOCATION
+				{
+					lat = -78.0908203125
+					lon = 85.9130859375
+				}
+				LAND_LOCATION
+				{
+					lat = -87.1435546875
+					lon = 171.7822265625
+				}
+				LAND_LOCATION
+				{
+					lat = 80.9033203125
+					lon = 257.6513671875
+				}
+				WATER_LOCATION
+				{
+					lat = 72.0263671875
+					lon = 343.5205078125
+				}
+				WATER_LOCATION
+				{
+					lat = -71.4990234375
+					lon = 52.8662109375
+				}
+				WATER_LOCATION
+				{
+					lat = -75.0146484375
+					lon = 138.7353515625
+				}
+			}
+			BIOME
+			{
+				name = Tundra
+				landCount = 958
+				waterCount = 42
+				LAND_LOCATION
+				{
+					lat = 74.7509765625
+					lon = 85.9130859375
+				}
+				LAND_LOCATION
+				{
+					lat = 80.9033203125
+					lon = 171.7822265625
+				}
+				LAND_LOCATION
+				{
+					lat = 71.8505859375
+					lon = 257.6513671875
+				}
+				WATER_LOCATION
+				{
+					lat = 55.3271484375
+					lon = 171.7822265625
+				}
+				WATER_LOCATION
+				{
+					lat = 71.4990234375
+					lon = 257.6513671875
+				}
+				WATER_LOCATION
+				{
+					lat = -3.8232421875
+					lon = 69.3896484375
+				}
+			}
+			BIOME
+			{
+				name = Shores
+				landCount = 129
+				waterCount = 871
+				LAND_LOCATION
+				{
+					lat = 64.6435546875
+					lon = 85.9130859375
+				}
+				LAND_LOCATION
+				{
+					lat = 10.6787109375
+					lon = 171.7822265625
+				}
+				LAND_LOCATION
+				{
+					lat = 76.5966796875
+					lon = 257.6513671875
+				}
+				WATER_LOCATION
+				{
+					lat = 7.7783203125
+					lon = 85.9130859375
+				}
+				WATER_LOCATION
+				{
+					lat = -9.2724609375
+					lon = 171.7822265625
+				}
+				WATER_LOCATION
+				{
+					lat = 11.7333984375
+					lon = 257.6513671875
+				}
+			}
+			BIOME
+			{
+				name = Deserts
+				landCount = 985
+				waterCount = 15
+				LAND_LOCATION
+				{
+					lat = 8.8330078125
+					lon = 257.6513671875
+				}
+				LAND_LOCATION
+				{
+					lat = 5.9326171875
+					lon = 241.1279296875
+				}
+				LAND_LOCATION
+				{
+					lat = -3.1201171875
+					lon = 224.6044921875
+				}
+				WATER_LOCATION
+				{
+					lat = 7.4267578125
+					lon = 257.6513671875
+				}
+				WATER_LOCATION
+				{
+					lat = 3.9990234375
+					lon = 241.1279296875
+				}
+				WATER_LOCATION
+				{
+					lat = -8.3056640625
+					lon = 224.6044921875
+				}
+			}
+			BIOME
+			{
+				name = Badlands
+				landCount = 9172
+				waterCount = 6
+				LAND_LOCATION
+				{
+					lat = -21.2255859375
+					lon = 69.3896484375
+				}
+				LAND_LOCATION
+				{
+					lat = -18.3251953125
+					lon = 52.8662109375
+				}
+				LAND_LOCATION
+				{
+					lat = -12.1728515625
+					lon = 36.3427734375
+				}
+				WATER_LOCATION
+				{
+					lat = -20.4345703125
+					lon = 71.3232421875
+				}
+				WATER_LOCATION
+				{
+					lat = -14.2822265625
+					lon = 41.2646484375
+				}
+				WATER_LOCATION
+				{
+					lat = -30.4541015625
+					lon = 50.4931640625
+				}
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = PersistentDataStore
+		scene = 7, 8, 5
+		DATA
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = ContractVesselTracker
+		scene = 7, 8, 5
+	}
+	SCENARIO
+	{
+		name = SCANcontroller
+		scene = 7, 5, 8
+		colours = 0
+		map_markers = True
+		map_flags = True
+		map_waypoints = True
+		map_orbit = True
+		map_asteroids = True
+		map_grid = True
+		map_ResourceOverlay = False
+		projection = 0
+		map_width = 0
+		map_x = 100
+		map_y = 50
+		anomalyMarker = ✗
+		legend = False
+		scan_background = True
+		timeWarpResolution = 20
+		resourceSelection = Ore
+		dataRebuild = False
+		mainMapVisible = False
+		bigMapVisible = False
+		kscMapVisible = False
+		toolTips = True
+		useStockAppLauncher = True
+		resourceBiomeLock = True
+		useStockBiomes = False
+		biomeTransparency = 40
+		mechJebTargetSelection = False
+		easyModeScanning = True
+		needsNarrowBand = True
+		lowBiomeColor = 0,0.46,0.02345098,1
+		highBiomeColor = 0.7,0.2388235,0,1
+		lowSlopeColorOne = 0.004705883,0.6,0.3788235,1
+		highSlopeColorOne = 0.9764706,1,0.4627451,1
+		lowSlopeColorTwo = 0.9764706,1,0.4627451,1
+		highSlopeColorTwo = 0.94,0.2727843,0.007372549,1
+		Scanners
+		{
+		}
+		Progress
+		{
+			Body
+			{
+				Name = Kerbin
+				Disabled = False
+				MinHeightRange = -1500
+				MaxHeightRange = 6500
+				ClampHeight = 0
+				PaletteName = Default
+				PaletteSize = 7
+				PaletteReverse = False
+				PaletteDiscrete = False
+				Map = CAABAAAA-----0AHQAAAD0AIBYD0AwACAOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AODNAAEACw__
+			}
+		}
+		SCANResources
+		{
+			ResourceType
+			{
+				Resource = Ore
+				MinColor = 0.2414545,0.1207273,0.83,1
+				MaxColor = 0.7888628,0,0.94,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|7.500,1|1.000|7.500,2|1.000|7.500,3|1.000|7.500,4|1.000|7.500,5|1.000|7.500,6|1.000|7.500,7|1.000|7.500,8|1.000|7.500,9|1.000|7.500,10|1.000|7.500,11|1.000|7.500,12|1.000|7.500,13|1.000|7.500,14|1.000|7.500,15|1.000|7.500,16|1.000|7.500
+			}
+			ResourceType
+			{
+				Resource = Karbonite
+				MinColor = 0,0.3192157,0.74,1
+				MaxColor = 0.75,0.3823529,0,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.800|2.200,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500
+			}
+			ResourceType
+			{
+				Resource = Minerals
+				MinColor = 0.4762353,0.04329412,0.92,1
+				MaxColor = 0,0.576471,0.07451,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500
+			}
+			ResourceType
+			{
+				Resource = Substrate
+				MinColor = 0.6418824,0.01380392,0.88,1
+				MaxColor = 0.7428235,0.82,0,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500
+			}
+			ResourceType
+			{
+				Resource = Uraninite
+				MinColor = 0,0.839216,0.760784,1
+				MaxColor = 1,0.2352941,0.03137255,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500
+			}
+			ResourceType
+			{
+				Resource = Water
+				MinColor = 0.76,0,0.5722353,1
+				MaxColor = 0,0.5687844,0.98,1
+				Transparency = 20
+				MinMaxValues = 0|0.500|6.500,1|5.000|45.000,2|0.500|6.500,3|0.500|6.500,4|0.500|6.500,5|0.500|6.500,6|0.500|6.500,7|0.500|6.500,8|0.500|6.500,9|5.000|40.000,10|0.500|6.500,11|0.500|6.500,12|0.500|6.500,13|0.500|6.500,14|0.500|6.500,15|0.500|6.500,16|0.500|6.500
+			}
+			ResourceType
+			{
+				Resource = MetallicOre
+				MinColor = 1,0,1,1
+				MaxColor = 0.9,0.6,0,1
+				Transparency = 20
+				MinMaxValues = 8|1.000|6.500,1|1.000|6.500,0|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500
+			}
+			ResourceType
+			{
+				Resource = He-3
+				MinColor = 0,0.5490196,1,1
+				MaxColor = 0.3670588,0.9,0,1
+				Transparency = 20
+				MinMaxValues = 0|0.000|5.000,1|0.000|5.000,2|0.000|5.000,3|0.000|5.000,4|0.000|5.000,5|0.000|5.000,6|0.000|5.000,7|0.000|5.000,8|0.000|5.000,9|0.000|5.000,10|0.000|5.000,11|0.000|5.000,12|0.000|5.000,13|0.000|5.000,14|0.000|5.000,15|0.000|5.000,16|0.000|5.000
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = contractModifierScenario
+		scene = 7, 6, 8, 5
+		version = 1.0
+		allowZero = False
+		alterActive = False
+		stockToolbar = True
+		warnedAlterActive = False
+		warnedToolbar = False
+		warnedZero = False
+		Contract_Types
+		{
+			Contract_Type
+			{
+				TypeName = GlobalSettings
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = CollectScience
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ExploreBody
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = GrandTour
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = PartTest
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = PlantFlag
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = RescueKerbal
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = AltitudeRecord
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = FirstLaunch
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = OrbitKerbin
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ReachSpace
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ARMContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = BaseContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ISRUContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = SatelliteContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = StationContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = SurveyContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanKerbinLoRes
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanMunLoRes
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanMinmus
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanEveLoRes
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanDunaLoRes
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanKerbinMultispectral
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanMunMinmusMultispectral
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanDresLoResBiome
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanMohoLoResBiome
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanJovianMoons
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = ScanEelooLoResBiome
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Biome
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = HiRes
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = LoRes
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = M700
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_Asteroid
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_Attraction
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_AttractionReturn
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_Base
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_Casino
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_FirstTourist
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_GasGiantMoons
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_Hotel
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_Investor
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_LowOrbit
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_Moons
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_Station
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_SubOrbital
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = Tourism_TwoMoons
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = RecoverAsset
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = RecordTrackContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = TourismContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+			Contract_Type
+			{
+				TypeName = WorldFirstContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
+		}
+		Parameter_Types
+		{
+			Parameter_Type
+			{
+				TypeName = GlobalSettings
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReachAltitudeEnvelope
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReachBiome
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReachDestination
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReachSituation
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReachSpeedEnvelope
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = AltitudeRecord
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = BoardAnyVessel
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = CollectScience
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = EnterOrbit
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = EnterSOI
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = KerbalDeaths
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = LandOnBody
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = LaunchVessel
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = PartTest
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = PlantFlag
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReachFlightEnvelope
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReachSpace
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = RecoverKerbal
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = AsteroidParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = CrewCapacityParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = FacilitySystemsParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = LocationAndSituationParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = MobileBaseParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = PartRequestParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ProbeSystemsParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ResourceExtractionParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ResourcePossessionParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = SpecificOrbitParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = StabilityParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = StationaryPointParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = SurveyWaypointParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = AcquireCrew
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = AcquirePart
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = KerbalDestinationParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = KerbalTourParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ProgressTrackingParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = RecordTrackingParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = VesselDestinationParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = HasAstronaut
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = None
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = AtMost
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = AtLeast
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = Duration
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = PerformOrbitalSurvey
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = RecoverKerbalCustom
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = TargetDestroyed
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReachSpaceCustom
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = HasCrewCapacity
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = CollectScienceCustom
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = Rendezvous
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = PlantFlagCustom
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = VesselIsType
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = VesselDestroyed
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = VesselNotDestroyed
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = Docking
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = OrbitParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = PartValidation
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = HasPassengers
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = IsNotVessel
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReachState
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = VisitWaypoint
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = SpecificOrbitWrapper
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = VesselParameterDelegator
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = VesselMass
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = Timer
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = Sequence
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = HasResource
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = ReturnHome
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = HasCrew
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = VesselHasVisited
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = VesselParameterGroup
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
+				TypeName = SCANsatCoverage
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = contractScenario
+		scene = 7, 6, 8, 5
+		version = 1.0.5.2
+		stockToolbar = True
+		replaceStockToolbar = False
+		replaceStockWarned = False
+		toolTips = True
+		fontSmall = True
+		windowSize = 0
+		Contracts_Window_Parameters
+		{
+			WindowPosition = 50,80,250,300,50,80,250,300,50,80,250,300,50,80,250,300
+			WindowVisible = False,False,False,False
+			Contracts_Window_Mission
+			{
+				MissionName = MasterMission
+				ActiveListID = 2b73b01e-57d2-4d0c-bb11-d815cec9a14f|N|True,eb992f4d-3964-4167-8e34-adeb946413fc|N|True,286c236d-4bc2-4551-993d-f6d618c64746|N|True
+				HiddenListID = 
+				VesselIDs = 
+				AscendingSort = True
+				ShowActiveList = True
+				SortMode = 1
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = ExSettings
+		scene = 5, 6, 7, 8
+		Settings
+		{
+			UseKAC = True
+			KACAction = KillWarp
+			ShipInfo
+			{
+				rect = 0,0,0,0
+				visible = True
+			}
+			BuildWindow
+			{
+				rect = 0,0,0,0
+				visible = True
+				link_lfo_sliders = True
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = KerbalStats
+		scene = 5, 6, 7, 8
+		Roster
+		{
+			KerbalExt
+			{
+				experience
+				{
+				}
+				profession
+				{
+					current = Pilot
+				}
+			}
+			KerbalExt
+			{
+				experience
+				{
+				}
+				profession
+				{
+					current = Engineer
+				}
+			}
+			KerbalExt
+			{
+				experience
+				{
+				}
+				profession
+				{
+					current = Scientist
+				}
+			}
+			KerbalExt
+			{
+				experience
+				{
+				}
+				profession
+				{
+					current = Pilot
+				}
+			}
+			KerbalExt
+			{
+				experience
+				{
+				}
+				profession
+				{
+					current = Scientist
+				}
+			}
+			KerbalExt
+			{
+				experience
+				{
+				}
+				profession
+				{
+					current = Pilot
+				}
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = HallOfFameScenarioModule
+		scene = 7, 8, 5
+	}
+	SCENARIO
+	{
+		name = DeepFreeze
+		scene = 5, 6, 7, 8
+		DFGameSettings
+		{
+			Enabled = True
+		}
+	}
+	SCENARIO
+	{
+		name = TRScenario
+		scene = 5
+		reflectionType = REAL
+		isHelmetRemovalEnabled = True
+		isAtmSuitEnabled = True
+		Kerbals
+		{
+			Jebediah Kerman = M GENERIC GENERIC
+			Bill Kerman = M GENERIC GENERIC
+			Bob Kerman = M GENERIC GENERIC
+			Valentina Kerman = F GENERIC GENERIC
+			Tanma Kerman = F GENERIC GENERIC
+			Seanfry Kerman = M GENERIC GENERIC
+		}
+		ClassSuits
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = CustomWaypoints
+		scene = 7, 8
+	}
+	SCENARIO
+	{
+		name = ResourceScenario
+		scene = 5, 7, 6
+		RESOURCE_SETTINGS
+		{
+			GameSeed = 137193774
+			MaxDeltaTime = 21600
+		}
+	}
+	SCENARIO
+	{
+		name = AGextScenario
+		scene = 7
+	}
+	SCENARIO
+	{
+		name = AGextScenarioEditor
+		scene = 6
+	}
+	SCENARIO
+	{
+		name = HaystackScenarioModule
+		scene = 7, 8
+	}
+	SCENARIO
+	{
+		name = KerbalAlarmClockScenario
+		scene = 5
+		KACAlarmListStorage
+		{
+		}
+	}
+	FLIGHTSTATE
+	{
+		version = 1.0.4
+		UT = 4.99999999999998
+		activeVessel = 0
+		mapViewFiltering = 0
+	}
+	ROSTER
+	{
+		KERBAL
+		{
+			name = Jebediah Kerman
+			gender = Male
+			type = Crew
+			brave = 0.5
+			dumb = 0.5
+			badS = True
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Bill Kerman
+			gender = Male
+			type = Crew
+			brave = 0.5
+			dumb = 0.8
+			badS = False
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Bob Kerman
+			gender = Male
+			type = Crew
+			brave = 0.3
+			dumb = 0.1
+			badS = False
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Valentina Kerman
+			gender = Female
+			type = Crew
+			brave = 0.55
+			dumb = 0.4
+			badS = True
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Tanma Kerman
+			gender = Female
+			type = Unowned
+			brave = 0.5331646
+			dumb = 0.129368
+			badS = False
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Seanfry Kerman
+			gender = Male
+			type = Unowned
+			brave = 0.8159291
+			dumb = 0.8602358
+			badS = False
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+	}
+	MESSAGESYSTEM
+	{
+		flash = False
+	}
+}
