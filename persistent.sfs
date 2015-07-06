@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/NASA
-	launchID = 7
+	launchID = 21
 	PARAMETERS
 	{
 		preset = Normal
@@ -87,9 +87,31 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 2263.64732421722
+		update = 14008.7412159731
 		CONTRACTS
 		{
+			CONTRACT
+			{
+				guid = 65b380c8-090b-442d-acf2-88c89822350d
+				type = WorldFirstContract
+				prestige = 0
+				seed = -29141267
+				state = Active
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = Floating
+				values = 43200,0,201834.85865593,532110.081911087,220000,40,17.44,0,56879.9398536674,14011.5212159732,0,0
+				targetBody = 2
+				targetType = FLYBY
+				PARAM
+				{
+					name = ProgressTrackingParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					targetBody = 2
+					targetType = FLYBY
+				}
+			}
 			CONTRACT
 			{
 				guid = 692c5964-294e-4c39-a91e-9644a7519342
@@ -169,18 +191,18 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = 2cdc656a-9adc-41e4-aec7-22d23b533bc8
+				guid = f834cf34-0dff-4302-bcb3-4d74c281b744
 				type = PartTest
 				prestige = 0
-				seed = -578764554
-				state = Active
-				agent = Kerbodyne
+				seed = 1526355080
+				state = Offered
+				agent = Rockomax Conglomerate
 				deadlineType = Floating
 				expiryType = Floating
-				values = 21600,9201600,9000,22500,9000,5,1,1,23774.6273242173,2260.68732421722,9203860.68732422,0
-				part = LaunchEscapeSystem
+				values = 38631.7921490736,8228571.72775267,46795.6712139225,122838.631358068,48667.4964380265,15,6.144799,4,44118.9775104042,0,0,0
+				part = solidBooster1-1
 				dest = 1
-				sit = PRELAUNCH
+				sit = FLYING
 				exp = False
 				PARAM
 				{
@@ -188,7 +210,7 @@ GAME
 					id = runTest
 					state = Incomplete
 					values = 0,0,0,0,0
-					part = LaunchEscapeSystem
+					part = solidBooster1-1
 					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
 					PARAM
 					{
@@ -207,67 +229,42 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						sit = PRELAUNCH
+						sit = FLYING
 						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 16000
+						maxAlt = 26000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 200
+						maxSpd = 1100
 					}
 				}
 			}
 			CONTRACT
 			{
-				guid = c9c596fb-74a6-4b92-b9d3-39a5153f24e2
+				guid = c8599211-21ed-4faf-acc9-28312a34d9a8
 				type = PartTest
 				prestige = 0
-				seed = -578764553
-				state = Active
-				agent = Modular Rocket Systems
-				deadlineType = Floating
-				expiryType = Floating
-				values = 44910.8891834127,9566019.3960669,9362.69965152741,24577.0854691387,9733.4992876053,5,0.8806113,0.952381,47085.51650763,2260.68732421722,9568280.08339112,0
-				part = NBdecouplerLowProfile2m
-				dest = 1
-				sit = PRELAUNCH
-				exp = False
-				PARAM
-				{
-					name = PartTest
-					id = runTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = NBdecouplerLowProfile2m
-					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
-					PARAM
-					{
-						name = ReachDestination
-						id = testDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						id = testSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = PRELAUNCH
-						title = 
-					}
-				}
-			}
-			CONTRACT
-			{
-				guid = ddea3b5e-a71b-49e1-a4c0-84c434003d5b
-				type = PartTest
-				prestige = 0
-				seed = -466665740
+				seed = 1292566702
 				state = Offered
 				agent = Modular Rocket Systems
 				deadlineType = Floating
 				expiryType = Floating
-				values = 22455.4445917063,9566019.3960669,46813.498257637,122885.427345693,48667.4964380265,15,5.283668,3.809524,24535.4719159237,0,0,0
+				values = 22455.4445917063,9566019.3960669,46813.498257637,122885.427345693,48667.4964380265,15,5.283668,3.809524,27916.2899530364,0,0,0
 				part = NBdecouplerRadialMini
 				dest = 1
 				sit = FLYING
@@ -307,7 +304,7 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						minAlt = 6000
+						minAlt = 8000
 						maxAlt = 16000
 					}
 					PARAM
@@ -317,25 +314,25 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						minSpd = 100
-						maxSpd = 700
+						minSpd = 200
+						maxSpd = 800
 					}
 				}
 			}
 			CONTRACT
 			{
-				guid = c9ca2fe9-f639-4230-b3c4-58c55e5b04b6
+				guid = 0a1ce06d-9fd1-4f40-be29-88a6f55aa185
 				type = PartTest
 				prestige = 0
-				seed = -1548204999
-				state = Offered
+				seed = 1292566705
+				state = Active
 				agent = Modular Rocket Systems
 				deadlineType = Floating
 				expiryType = Floating
-				values = 22455.4445917063,9566019.3960669,46813.498257637,122885.427345693,48667.4964380265,15,5.283668,3.809524,24694.3919159236,0,0,0
-				part = NBLAStower
+				values = 22455.4445917063,9566019.3960669,9362.69965152741,24577.0854691387,9733.4992876053,5,0.8806113,0.952381,27916.2899530364,14011.5212159732,9580030.91728287,0
+				part = NBLASshroud
 				dest = 1
-				sit = FLYING
+				sit = PRELAUNCH
 				exp = False
 				PARAM
 				{
@@ -343,72 +340,7 @@ GAME
 					id = runTest
 					state = Incomplete
 					values = 0,0,0,0,0
-					part = NBLAStower
-					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
-					PARAM
-					{
-						name = ReachDestination
-						id = testDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						id = testSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = FLYING
-						title = 
-					}
-					PARAM
-					{
-						name = ReachAltitudeEnvelope
-						id = testAltitudeEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minAlt = 1000
-						maxAlt = 7000
-					}
-					PARAM
-					{
-						name = ReachSpeedEnvelope
-						id = testSpeedEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minSpd = 300
-						maxSpd = 600
-					}
-				}
-			}
-			CONTRACT
-			{
-				guid = 937d0591-16fd-460f-95d0-4792e738fd12
-				type = PartTest
-				prestige = 0
-				seed = -1548204997
-				state = Active
-				agent = O.M.B. Demolition Enterprises
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21600,9201600,9000,23624.9989271164,9449.99957084656,5,0.952381,1,23838.9473242172,2260.68732421722,9203860.68732422,0
-				part = stackSeparatorMini
-				dest = 1
-				sit = PRELAUNCH
-				exp = True
-				PARAM
-				{
-					name = PartTest
-					id = runTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = stackSeparatorMini
+					part = NBLASshroud
 					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
 					PARAM
 					{
@@ -434,16 +366,16 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = 2d409311-8f95-4c91-9896-93f5ee945681
+				guid = 85e9f8d1-da7d-4258-abde-75e3a197e6f4
 				type = PartTest
-				prestige = 1
-				seed = -402797748
+				prestige = 0
+				seed = 1703178844
 				state = Offered
-				agent = C7 Aerospace Division
+				agent = SpaceY Technologies Corporation
 				deadlineType = Floating
 				expiryType = Floating
-				values = 43200,9201600,56250,140625,56250,19,8,5,44755.8847070304,0,0,0
-				part = JetEngine
+				values = 41554.2880464281,8851063.35388919,51502.4992382526,135194.054360837,51502.4992382526,15,5.190558,3.960396,45411.9353706439,0,0,0
+				part = SYengine1mK1
 				dest = 1
 				sit = FLYING
 				exp = True
@@ -453,7 +385,7 @@ GAME
 					id = runTest
 					state = Incomplete
 					values = 0,0,0,0,0
-					part = JetEngine
+					part = SYengine1mK1
 					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
 					PARAM
 					{
@@ -482,8 +414,8 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						minAlt = 13000
-						maxAlt = 15000
+						minAlt = 12000
+						maxAlt = 19000
 					}
 					PARAM
 					{
@@ -492,39 +424,39 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						minSpd = 100
-						maxSpd = 200
+						minSpd = 200
+						maxSpd = 1000
 					}
 				}
 			}
 			CONTRACT
 			{
-				guid = 831241f6-3d77-498b-9b1a-fe23f8aeefdb
+				guid = 7f6363a6-e029-4c70-b8ad-a4ec598a2c5b
 				type = PartTest
-				prestige = 1
-				seed = -402797721
-				state = Offered
-				agent = Jebediah Kerman's Junkyard and Spacecraft Parts Co
+				prestige = 0
+				seed = 553462726
+				state = Active
+				agent = O.M.B. Demolition Enterprises
 				deadlineType = Floating
 				expiryType = Floating
-				values = 38571.4282035828,8215714.20736313,77586.2002372742,213362.055277002,99000.0021457672,31,13.62797,8.653847,40127.3129106131,0,0,0
-				part = liquidEngine3
+				values = 21600,9201600,9000,23624.9989271164,9449.99957084656,5,0.952381,1,27097.1853613309,5515.06536133128,9207115.06536133,0
+				part = launchClamp1
 				dest = 1
-				sit = SUB_ORBITAL
-				exp = True
+				sit = PRELAUNCH
+				exp = False
 				PARAM
 				{
 					name = PartTest
 					id = runTest
 					state = Incomplete
 					values = 0,0,0,0,0
-					part = liquidEngine3
+					part = launchClamp1
 					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
 					PARAM
 					{
 						name = ReachDestination
 						id = testDestination
-						state = Incomplete
+						state = Complete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
 						dest = 1
@@ -537,84 +469,442 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						sit = SUB_ORBITAL
+						sit = PRELAUNCH
 						title = 
-					}
-					PARAM
-					{
-						name = ReachAltitudeEnvelope
-						id = testAltitudeEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minAlt = 70000
-						maxAlt = 84000
 					}
 				}
 			}
 			CONTRACT
 			{
-				guid = c4ecf70d-a90c-4b9a-a4bb-36088704e725
-				type = PartTest
+				guid = f863930f-11e1-4634-becb-24ea65998ea7
+				type = ConfiguredContract
 				prestige = 1
-				seed = -402797789
-				state = Offered
-				agent = Modular Rocket Systems
-				deadlineType = Floating
+				seed = 346080243
+				state = Active
+				agent = Research & Development Department
+				deadlineType = None
 				expiryType = Floating
-				values = 23294.118179714,9923294.34455816,60817.5024193525,167248.135278225,65587.5052571298,19,6.237329,4.545455,24850.0028867443,0,0,0
-				part = NBjetBasic0m
-				dest = 1
-				sit = FLYING
-				exp = True
+				values = 115260,0,75000,125000,75000,125,35,0,119666.701142578,13101.7998536548,0,0
+				subtype = ScanKerbinLoRes
+				title = Altimetry Scan of Kerbin
+				description = Our scientists have suggested that knowing what the rock we're flying around looks like might be a good idea. Perform an altimetry scan of Kerbin's surface and report back with the answer to the ultimate question, "Where did I put my keys?".
+				synopsis = Send an unkerbaled vessel into orbit, we suggest a 496km orbit with an 79.8 degree inclination, and scan Kerbin's surface with the SCAN Radar Altimetry Sensor. The key is getting the data we require, if you want to go with a custom orbit feel free but we didn't spend good money researching this one for no gorram reason!
+				completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
+				notes = Tip: There's probably some other science equipment you can take along for some extra science!
+				hash = 906807492
 				PARAM
 				{
-					name = PartTest
-					id = runTest
+					name = VesselParameterGroup
+					id = Maxwell1
 					state = Incomplete
 					values = 0,0,0,0,0
-					part = NBjetBasic0m
-					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					ContractIdentifier = ScanKerbinLoRes
+					title = 
+					notes = 
+					completedMessage = 
+					define = Maxwell I
+					duration = 23400
 					PARAM
 					{
-						name = ReachDestination
-						id = testDestination
-						state = Incomplete
+						name = HasCrew
+						id = HasCrew1
+						state = Complete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						dest = 1
+						ContractIdentifier = ScanKerbinLoRes
 						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						minCrew = 0
+						maxCrew = 0
+						minExperience = 0
+						maxExperience = 5
+						DOCKED_SUB_VESSEL
+						{
+							hash = 4051758611
+							strength = STRONG
+							completionTime = 13132.3998536554
+						}
+						DOCKED_SUB_VESSEL
+						{
+							hash = 3073047961
+							strength = STRONG
+							completionTime = 13571.759853665
+						}
+						DOCKED_SUB_VESSEL
+						{
+							hash = 1363433670
+							strength = STRONG
+							completionTime = 13571.759853665
+						}
+						DOCKED_SUB_VESSEL
+						{
+							hash = 944347938
+							strength = STRONG
+							completionTime = 13571.759853665
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Unmanned
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = ScanKerbinLoRes
+							title = Unmanned
+							notes = 
+							completedMessage = 
+						}
 					}
 					PARAM
 					{
-						name = ReachSituation
-						id = testSituation
+						name = PartValidation
+						id = PartValidation
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						sit = FLYING
+						ContractIdentifier = ScanKerbinLoRes
 						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						minCount = 1
+						maxCount = 2147483647
+						FILTER
+						{
+							type = FILTER
+							part = SCANsat.Scanner
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = With type: SCAN RADAR Altimetry Sensor
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = ScanKerbinLoRes
+							title = With type: SCAN RADAR Altimetry Sensor
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = CountParameterDelegate`1
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = ScanKerbinLoRes
+							title = Count: At least 1 
+							notes = 
+							completedMessage = 
+						}
 					}
+				}
+				PARAM
+				{
+					name = SCANsatCoverage
+					id = SCANsatCoverage1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = ScanKerbinLoRes
+					title = 
+					notes = 
+					completedMessage = 
+					coverage = 50
+					scanName = AltimetryLoRes
+					scanType = 1
+					targetBody = Kerbin
+				}
+				PARAM
+				{
+					name = OrbitParameter
+					id = Orbit
+					optional = True
+					state = Incomplete
+					disableOnStateChange = False
+					values = 93750,0,25,6,0
+					ContractIdentifier = ScanKerbinLoRes
+					title = (OPTIONAL)Achieve an orbit with the following parameters
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					situation = ORBITING
+					targetBody = Kerbin
+					minAltitude = 0
+					minApoapsis = 493234
+					maxApoapsis = 499314
+					minPeriapsis = 493101
+					maxPeriapsis = 499106
+					minEccentricity = 0
+					maxEccentricity = 0.0021
+					minInclination = 79.3
+					maxInclination = 80.3
+					minPeriod = 0
 					PARAM
 					{
-						name = ReachAltitudeEnvelope
-						id = testAltitudeEnvelope
+						name = ParameterDelegate`1
+						id = Destination: Kerbin
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						minAlt = 10000
-						maxAlt = 13000
+						ContractIdentifier = ScanKerbinLoRes
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
 					}
 					PARAM
 					{
-						name = ReachSpeedEnvelope
-						id = testSpeedEnvelope
+						name = ParameterDelegate`1
+						id = Situation: Orbit
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						minSpd = 500
-						maxSpd = 1200
+						ContractIdentifier = ScanKerbinLoRes
+						title = Situation: Orbit
+						notes = 
+						completedMessage = 
 					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Apoapsis: Between 493,234 m and 499,314 m
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = ScanKerbinLoRes
+						title = Apoapsis: Between 493,234 m and 499,314 m
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Periapsis: Between 493,101 m and 499,106 m
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = ScanKerbinLoRes
+						title = Periapsis: Between 493,101 m and 499,106 m
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Eccentricity: Below 0.0021
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = ScanKerbinLoRes
+						title = Eccentricity: Below 0.0021
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Inclination: Between 79.3° and 80.3°
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = ScanKerbinLoRes
+						title = Inclination: Between 79.3° and 80.3°
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = eab392b1-f612-43dd-98a1-d1273a3ad6ad
+				type = BaseContract
+				prestige = 1
+				seed = -1576961691
+				state = Offered
+				agent = Integrated Integrals
+				deadlineType = Floating
+				expiryType = Floating
+				values = 42352.9412269592,126296470.738792,529615.392389664,1472625.0535351,594000.012874603,0,29.30909,21,55641.421080618,0,0,0
+				targetBody = 2
+				capacity = 5
+				PARAM
+				{
+					name = LocationAndSituationParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					targetBody = 2
+					targetSituation = 0
+					noun = outpost
+					finalObjective = False
+				}
+				PARAM
+				{
+					name = FacilitySystemsParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					hasAntenna = False
+					hasPowerGenerator = False
+					hasDockingPort = False
+					typeString = outpost
+					launchID = 0
+				}
+				PARAM
+				{
+					name = CrewCapacityParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					targetCapacity = 5
+				}
+				PARAM
+				{
+					name = ResourcePossessionParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					goalResource = 2000
+					resourceName = Ore
+					resourceTitle = ore
+					vesselName = outpost
+				}
+				PARAM
+				{
+					name = StabilityParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					holdSeconds = 10
+				}
+			}
+			CONTRACT
+			{
+				guid = a5afb8a8-8107-4bb1-a0b4-924919e066ce
+				type = SurveyContract
+				prestige = 1
+				seed = -28881015
+				state = Active
+				agent = Reaction Systems Ltd
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,46008000,187500,364375.007897615,206250.004470348,0,10,11,35279.9598536674,14011.5212159732,46022011.521216,0
+				targetBody = 1
+				centerLatitude = -3.71595130661634
+				centerLongitude = -162.054742603588
+				surveyTitle = Perform visual surveys of Kerbin.
+				randomTopic = Kerbin
+				surveyBriefing = There are places on Kerbin that we don't know much about, head there and see what you can see.
+				surveyDebriefing = These results are fantastic! We know so much more about Kerbin! We are forwarding funds now.
+				focusedSurvey = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 50000,0,19,4,0
+					actionDescription = Take a surface sample
+					experiment = surfaceSample
+					flightThreshold = 18900
+					band = 1
+					clusterState = MIXED
+					targetBody = 1
+					verified = True
+					wpSeed = 206316345
+					wpIndex = 0
+					wpTexture = sample
+					wpLatitude = -3.69151372659925
+					wpLongitude = -162.228972699866
+					wpLandlocked = True
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 50000,0,19,4,0
+					actionDescription = Take a surface sample
+					experiment = surfaceSample
+					flightThreshold = 17700
+					band = 1
+					clusterState = MIXED
+					targetBody = 1
+					verified = True
+					wpSeed = 206316345
+					wpIndex = 1
+					wpTexture = sample
+					wpLatitude = -3.92708618299005
+					wpLongitude = -161.887359711943
+					wpLandlocked = True
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 55000,0,19,4,0
+					actionDescription = Take a crew report
+					experiment = crewReport
+					flightThreshold = 19500
+					band = 3
+					clusterState = MIXED
+					targetBody = 1
+					verified = True
+					wpSeed = 206316345
+					wpIndex = 2
+					wpTexture = report
+					wpLatitude = 12.5433063551066
+					wpLongitude = -167.856479302172
+					wpLandlocked = False
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 55000,0,19,4,0
+					actionDescription = Take a crew report
+					experiment = crewReport
+					flightThreshold = 17500
+					band = 3
+					clusterState = MIXED
+					targetBody = 1
+					verified = True
+					wpSeed = 206316345
+					wpIndex = 3
+					wpTexture = report
+					wpLatitude = -9.77980536772489
+					wpLongitude = -142.929922041904
+					wpLandlocked = False
+				}
+			}
+			CONTRACT
+			{
+				guid = 2c756a8b-5df6-4873-9f29-36df73751710
+				type = RecoverAsset
+				prestige = 1
+				seed = -28881014
+				state = Offered
+				agent = Kerlington Model Rockets and Paper Products Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,46008000,146250,334125,146250,0,12,12,35279.9598536674,0,0,0
+				targetBody = 1
+				kerbalName = Rophie Kerman
+				partName = mk2LanderCabin
+				partID = 0
+				recoveryLocation = 2
+				recoveryType = 1
+				gender = 2
+				PARAM
+				{
+					name = AcquireCrew
+					state = Incomplete
+					values = 37125,0,0,5,0
+					title = Save Rophie Kerman
+					winOn = 0
+				}
+				PARAM
+				{
+					name = RecoverKerbal
+					state = Incomplete
+					values = 0,0,0,0,0
+					title = Recover Rophie Kerman on Kerbin
+					failOn = All
+					winOn = All
 				}
 			}
 			CONTRACT
@@ -664,47 +954,51 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = d99b94b5-8e1b-48e1-a8ac-b8878161fa4b
-				type = WorldFirstContract
+				guid = 352654f3-a804-4835-b983-3e63ac7616c4
+				type = StationContract
 				prestige = 2
-				seed = -256598999
-				state = Active
-				agent = Kerbin World-Firsts Record-Keeping Society
-				deadlineType = None
+				seed = 1815991148
+				state = Offered
+				agent = WinterOwl Aircraft Emporium
+				deadlineType = Floating
 				expiryType = Floating
-				values = 86400,0,25984.2513799667,68503.9354562759,33000,12,30.48,0,86400.08,1403.8247070305,0,0
-				targetBody = 1
-				targetType = ORBIT
+				values = 120558.135223389,239669572.824097,803347.320556641,2396234.379919,1103999.97711182,0,27.67043,12.84404,128352.972225381,0,0,0
+				targetBody = 0
+				capacity = 11
 				PARAM
 				{
-					name = ProgressTrackingParameter
+					name = LocationAndSituationParameter
 					state = Incomplete
 					values = 0,0,0,0,0
-					targetBody = 1
-					targetType = ORBIT
+					targetBody = 0
+					targetSituation = 5
+					noun = station
+					finalObjective = False
 				}
-			}
-			CONTRACT
-			{
-				guid = 8ea94ffb-3cbf-4b14-8088-913beb590fb0
-				type = RecordTrackContract
-				prestige = 2
-				seed = -1226336262
-				state = Active
-				agent = Kerbin World-Firsts Record-Keeping Society
-				deadlineType = None
-				expiryType = None
-				autoAccept = True
-				values = 0,0,0,372047.235667706,0,0,26.67,0,0,1475.16470703044,0,0
-				trackType = SPEED
-				trackValue = 2500
 				PARAM
 				{
-					name = RecordTrackingParameter
+					name = FacilitySystemsParameter
 					state = Incomplete
 					values = 0,0,0,0,0
-					trackType = SPEED
-					trackValue = 2500
+					hasAntenna = False
+					hasPowerGenerator = False
+					hasDockingPort = False
+					typeString = station
+					launchID = 0
+				}
+				PARAM
+				{
+					name = CrewCapacityParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					targetCapacity = 11
+				}
+				PARAM
+				{
+					name = StabilityParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					holdSeconds = 10
 				}
 			}
 			CONTRACT_FINISHED
@@ -728,6 +1022,29 @@ GAME
 					values = 0,0,0,0,0
 					targetBody = 1
 					targetType = REACHSPACE
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = d99b94b5-8e1b-48e1-a8ac-b8878161fa4b
+				type = WorldFirstContract
+				prestige = 2
+				seed = -256598999
+				state = Completed
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = Floating
+				values = 86400,0,25984.2513799667,68503.9354562759,33000,12,30.48,0,86400.08,1403.8247070305,0,0
+				targetBody = 1
+				targetType = ORBIT
+				PARAM
+				{
+					name = ProgressTrackingParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					targetType = ORBIT
 				}
 			}
 			CONTRACT_FINISHED
@@ -1420,21 +1737,1378 @@ GAME
 					}
 				}
 			}
+			CONTRACT_FINISHED
+			{
+				guid = 2cdc656a-9adc-41e4-aec7-22d23b533bc8
+				type = PartTest
+				prestige = 0
+				seed = -578764554
+				state = Completed
+				agent = Kerbodyne
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,9000,22500,9000,5,1,1,23774.6273242173,2260.68732421722,9203860.68732422,2581.96732421693
+				part = LaunchEscapeSystem
+				dest = 1
+				sit = PRELAUNCH
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = LaunchEscapeSystem
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 1437792704
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = PRELAUNCH
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = c9c596fb-74a6-4b92-b9d3-39a5153f24e2
+				type = PartTest
+				prestige = 0
+				seed = -578764553
+				state = Completed
+				agent = Modular Rocket Systems
+				deadlineType = Floating
+				expiryType = Floating
+				values = 44910.8891834127,9566019.3960669,9362.69965152741,24577.0854691387,9733.4992876053,5,0.8806113,0.952381,47085.51650763,2260.68732421722,9568280.08339112,2630.98732421689
+				part = NBdecouplerLowProfile2m
+				dest = 1
+				sit = PRELAUNCH
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = NBdecouplerLowProfile2m
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 1052215485
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = PRELAUNCH
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 937d0591-16fd-460f-95d0-4792e738fd12
+				type = PartTest
+				prestige = 0
+				seed = -1548204997
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,9000,23624.9989271164,9449.99957084656,5,0.952381,1,23838.9473242172,2260.68732421722,9203860.68732422,2682.72732421684
+				part = stackSeparatorMini
+				dest = 1
+				sit = PRELAUNCH
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = stackSeparatorMini
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 304101748
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = PRELAUNCH
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = ddea3b5e-a71b-49e1-a4c0-84c434003d5b
+				type = PartTest
+				prestige = 0
+				seed = -466665740
+				state = Completed
+				agent = Modular Rocket Systems
+				deadlineType = Floating
+				expiryType = Floating
+				values = 22455.4445917063,9566019.3960669,46813.498257637,122885.427345693,48667.4964380265,15,5.283668,3.809524,24535.4719159237,2573.16732421694,9568592.56339112,2784.76732421674
+				part = NBdecouplerRadialMini
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = NBdecouplerRadialMini
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 2770378880
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 6000
+						maxAlt = 16000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 100
+						maxSpd = 700
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = c9ca2fe9-f639-4230-b3c4-58c55e5b04b6
+				type = PartTest
+				prestige = 0
+				seed = -1548204999
+				state = Completed
+				agent = Modular Rocket Systems
+				deadlineType = Floating
+				expiryType = Floating
+				values = 22455.4445917063,9566019.3960669,46813.498257637,122885.427345693,48667.4964380265,15,5.283668,3.809524,24694.3919159236,2573.16732421694,9568592.56339112,2941.6873242166
+				part = NBLAStower
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = NBLAStower
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 2464070398
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 1000
+						maxAlt = 7000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 300
+						maxSpd = 600
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 5d75ad7c-856f-4305-baa1-2e98dc3a9175
+				type = PartTest
+				prestige = 0
+				seed = 989841612
+				state = Completed
+				agent = SpaceY Technologies Corporation
+				deadlineType = Floating
+				expiryType = Floating
+				values = 20777.1440232141,8851063.35388919,10300.4998476505,27038.8108721673,10300.4998476505,5,0.8650931,0.990099,23718.8313474307,2975.96732421657,8854039.32121341,2984.62732421656
+				part = SYSRB.0625L9
+				dest = 1
+				sit = LANDED
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = SYSRB.0625L9
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 2057380528
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 927c79c8-be65-404c-b362-37dc4de5453b
+				type = PartTest
+				prestige = 0
+				seed = 1152439035
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 43200,9201600,9000,23624.9989271164,9449.99957084656,5,0.952381,1,45984.7673242167,2975.96732421657,9204575.96732422,2997.88732421655
+				part = radialDecoupler1-2
+				dest = 1
+				sit = PRELAUNCH
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = radialDecoupler1-2
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 558842950
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = PRELAUNCH
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 3a262d1c-5e9d-4558-9d05-1bb58f920e12
+				type = PartTest
+				prestige = 0
+				seed = 1901527059
+				state = Completed
+				agent = Rockomax Conglomerate
+				deadlineType = Floating
+				expiryType = Floating
+				values = 38631.7921490736,8228571.72775267,9359.13424278451,24567.7262716136,9733.4992876053,5,1.024133,1,41314.5194732904,2975.96732421657,8231547.69507689,3458.80732421613
+				part = liquidEngine2-2
+				dest = 1
+				sit = LANDED
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = liquidEngine2-2
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 1507091047
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 28701bf9-f3a2-4345-9b66-dadfc585a36b
+				type = PartTest
+				prestige = 0
+				seed = 1652480823
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,9000,23624.9989271164,9449.99957084656,5,0.952381,1,24230.9873242169,2975.96732421657,9204575.96732422,3471.14732421612
+				part = radialDecoupler
+				dest = 1
+				sit = LANDED
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = radialDecoupler
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 4103818408
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 9d38d94f-fdb0-4843-84c5-ab32d2fe28df
+				type = PartTest
+				prestige = 0
+				seed = 1710609290
+				state = Completed
+				agent = SpaceY Technologies Corporation
+				deadlineType = Floating
+				expiryType = Floating
+				values = 41554.2880464281,8851063.35388919,10300.4998476505,27038.8108721673,10300.4998476505,5,0.8650931,0.990099,45032.6553706442,3504.18732421609,8854567.5412134,3520.84732421607
+				part = SYengine1mK1
+				dest = 1
+				sit = PRELAUNCH
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = SYengine1mK1
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 1199238722
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = PRELAUNCH
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = d034a108-3e3a-4a8f-8de3-96cb78fc2598
+				type = PartTest
+				prestige = 0
+				seed = 2065188637
+				state = Completed
+				agent = Modular Rocket Systems
+				deadlineType = Floating
+				expiryType = Floating
+				values = 22455.4445917063,9566019.3960669,9362.69965152741,24577.0854691387,9733.4992876053,5,0.8806113,0.952381,25453.3319159229,3504.18732421609,9569523.58339112,3530.80732421606
+				part = NBLASshroud
+				dest = 1
+				sit = LANDED
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = NBLASshroud
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 1199932893
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 5cb9bfaa-f13a-495c-a859-399f207dfb26
+				type = PartTest
+				prestige = 0
+				seed = 1932461378
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,9000,23624.9989271164,9449.99957084656,5,0.952381,1,25058.8073242161,3504.18732421609,9205104.18732422,3535.16732421605
+				part = launchClamp1
+				dest = 1
+				sit = PRELAUNCH
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = launchClamp1
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 1925888773
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = PRELAUNCH
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 436e1515-2256-463f-b792-84e67b792447
+				type = PartTest
+				prestige = 0
+				seed = 1932211139
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,45000,118124.994635582,47249.9978542328,15,5.714286,4,25058.8073242161,3565.50732421603,9205165.50732422,3663.88732421594
+				part = Corvus.Decoupler
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = Corvus.Decoupler
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 3350302944
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 11000
+						maxAlt = 18000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 100
+						maxSpd = 700
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = b5dbb3ba-6832-4c57-bc27-ad8db2e77835
+				type = PartTest
+				prestige = 0
+				seed = 2065408865
+				state = Completed
+				agent = Rockomax Conglomerate
+				deadlineType = Floating
+				expiryType = Floating
+				values = 38631.7921490736,8228571.72775267,46795.6712139225,122838.631358068,48667.4964380265,15,6.144799,4,41629.6794732901,3565.50732421603,8232137.23507689,3670.24732421594
+				part = solidBooster1-1
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = solidBooster1-1
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 3322260807
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 17000
+						maxAlt = 22000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 400
+						maxSpd = 1200
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 3c4ffcd0-0655-4145-819d-de94c0678f0b
+				type = PartTest
+				prestige = 0
+				seed = 295448903
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 43200,9201600,9000,23624.9989271164,9449.99957084656,5,0.952381,1,46735.1673242161,3565.50732421603,9205165.50732422,3857.64732421577
+				part = radialDecoupler1-2
+				dest = 1
+				sit = PRELAUNCH
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = radialDecoupler1-2
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 158559040
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = PRELAUNCH
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 77e80356-a71b-4c02-9ac0-b6549106b763
+				type = PartTest
+				prestige = 0
+				seed = 517690088
+				state = Completed
+				agent = Modular Rocket Systems
+				deadlineType = Floating
+				expiryType = Floating
+				values = 44910.8891834127,9566019.3960669,46813.498257637,122885.427345693,48667.4964380265,15,5.283668,3.809524,48441.6965076287,3565.50732421603,9569584.90339112,3891.86732421574
+				part = NBdecouplerRadialMini
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = NBdecouplerRadialMini
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 2842894765
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 4000
+						maxAlt = 9000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 0
+						maxSpd = 1000
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 9cd25a20-73b9-4d21-91e9-2d18191a44c7
+				type = PartTest
+				prestige = 0
+				seed = 517690091
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,45000,118124.994635582,47249.9978542328,15,5.714286,4,25130.8073242161,3565.50732421603,9205165.50732422,3970.32732421567
+				part = stackDecouplerMini
+				dest = 1
+				sit = FLYING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = stackDecouplerMini
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 3169295916
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 9000
+						maxAlt = 16000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 300
+						maxSpd = 700
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = af141815-94c4-45b2-b0a1-8eaba60858f2
+				type = PartTest
+				prestige = 0
+				seed = 560761294
+				state = Completed
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,45000,112500,45000,15,6,4,24181.9673242169,3565.50732421603,9205165.50732422,3977.16732421567
+				part = parachuteLarge
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = parachuteLarge
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 980316410
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 9000
+						maxAlt = 17000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 200
+						maxSpd = 900
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 831241f6-3d77-498b-9b1a-fe23f8aeefdb
+				type = PartTest
+				prestige = 1
+				seed = -402797721
+				state = Completed
+				agent = Jebediah Kerman's Junkyard and Spacecraft Parts Co
+				deadlineType = Floating
+				expiryType = Floating
+				values = 38571.4282035828,8215714.20736313,77586.2002372742,213362.055277002,99000.0021457672,31,13.62797,8.653847,40127.3129106131,3565.50732421603,8219279.71468735,4406.70114257795
+				part = liquidEngine3
+				dest = 1
+				sit = SUB_ORBITAL
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = liquidEngine3
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 2050212735
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = SUB_ORBITAL
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 70000
+						maxAlt = 84000
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 5c11c349-54c7-4055-93d4-decac2192ede
+				type = PartTest
+				prestige = 0
+				seed = 1137056705
+				state = Completed
+				agent = Rockomax Conglomerate
+				deadlineType = Floating
+				expiryType = Floating
+				values = 38631.7921490736,8228571.72775267,9359.13424278451,24567.7262716136,9733.4992876053,5,1.024133,1,42302.0394732895,5448.40536132982,8234020.133114,5460.84536133009
+				part = liquidEngine2-2
+				dest = 1
+				sit = PRELAUNCH
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = liquidEngine2-2
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 2991795846
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = PRELAUNCH
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 56804cef-64e0-4dd7-8e35-c5e0fca0b019
+				type = PartTest
+				prestige = 0
+				seed = 1137056727
+				state = Completed
+				agent = SpaceY Technologies Corporation
+				deadlineType = Floating
+				expiryType = Floating
+				values = 20777.1440232141,8851063.35388919,10300.4998476505,27038.8108721673,10300.4998476505,5,0.8650931,0.990099,24447.39134743,5448.40536132982,8856511.75925052,5460.84536133009
+				part = SYSRB.0625L9
+				dest = 1
+				sit = LANDED
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = SYSRB.0625L9
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 515308160
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 908495f8-b514-4dd0-b851-c95daafa324c
+				type = PartTest
+				prestige = 0
+				seed = 1829544138
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 43200,9201600,9000,23624.9989271164,9449.99957084656,5,0.952381,1,47267.6351464812,5448.40536132982,9207048.40536133,5487.18536133067
+				part = Corvus.Decoupler
+				dest = 1
+				sit = LANDED
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = Corvus.Decoupler
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 2933710620
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 4645fc0d-6bca-44c9-ac22-06ec14e5a315
+				type = PartTest
+				prestige = 0
+				seed = 246214954
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,9000,23624.9989271164,9449.99957084656,5,0.952381,1,25491.8673242157,5448.40536132982,9207048.40536133,5487.18536133067
+				part = radialDecoupler
+				dest = 1
+				sit = PRELAUNCH
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = radialDecoupler
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 664363906
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = PRELAUNCH
+						title = 
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 2d409311-8f95-4c91-9896-93f5ee945681
+				type = PartTest
+				prestige = 1
+				seed = -402797748
+				state = Completed
+				agent = C7 Aerospace Division
+				deadlineType = Floating
+				expiryType = Floating
+				values = 43200,9201600,56250,140625,56250,19,8,5,44755.8847070304,13101.7998536548,9214701.79985365,13288.4598536588
+				part = JetEngine
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = JetEngine
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 840690694
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 13000
+						maxAlt = 15000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 100
+						maxSpd = 200
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = c4ecf70d-a90c-4b9a-a4bb-36088704e725
+				type = PartTest
+				prestige = 1
+				seed = -402797789
+				state = Completed
+				agent = Modular Rocket Systems
+				deadlineType = Floating
+				expiryType = Floating
+				values = 23294.118179714,9923294.34455816,60817.5024193525,167248.135278225,65587.5052571298,19,6.237329,4.545455,24850.0028867443,13101.7998536548,9936396.14441182,13679.9398536674
+				part = NBjetBasic0m
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = NBjetBasic0m
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 147174682
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 10000
+						maxAlt = 13000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 500
+						maxSpd = 1200
+					}
+				}
+			}
 		}
 	}
 	SCENARIO
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 25982075.4630716
-	}
-	SCENARIO
-	{
-		name = ScenarioNewGameIntro
-		scene = 5, 6, 8
-		kscComplete = True
-		editorComplete = True
-		tsComplete = False
+		funds = 25951155.5447513
 	}
 	SCENARIO
 	{
@@ -1461,8 +3135,8 @@ GAME
 			}
 			RecordsSpeed
 			{
-				reached = 1476.30470703044
-				record = 1074.68659727042
+				reached = 6954.0853613627
+				record = 2304.24670451428
 			}
 			RecordsDistance
 			{
@@ -1489,6 +3163,19 @@ GAME
 			Kerbin
 			{
 				reached = 115.139999999994
+				Orbit
+				{
+					completed = 7794.7570019927
+					vessel
+					{
+						name = WhyUBringMeJunk
+						flag = Squad/Flags/NASA
+					}
+					crew
+					{
+						crews = Bob Kerman, Beauregard Kerman
+					}
+				}
 				Landing
 				{
 					completed = 117.319999999994
@@ -1531,6 +3218,19 @@ GAME
 				{
 					completed = 699.711523437387
 				}
+				ReturnFromOrbit
+				{
+					completed = 10998.4198536089
+					vessel
+					{
+						name = WhyUBringMeJunk
+						flag = Squad/Flags/NASA
+					}
+					crew
+					{
+						crews = Beauregard Kerman, Bob Kerman
+					}
+				}
 			}
 		}
 	}
@@ -1538,7 +3238,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 24765.42
+		sci = 23733.35
 		Tech
 		{
 			id = start
@@ -1589,6 +3289,7 @@ GAME
 			part = ServiceBay.125
 			part = US.2R340.Radial.Oxygen
 			part = US.Radial.R30.Water
+			part = US.Radial.R40.Food
 		}
 		Tech
 		{
@@ -1778,6 +3479,216 @@ GAME
 			part = US.1P110.Wedge.Fuelcell
 			part = US.1R330.Wedge.Hydrogen
 		}
+		Tech
+		{
+			id = propulsionSystems
+			state = Available
+			cost = 90
+			part = liquidEngineMini
+			part = microEngine
+			part = miniFuelTank
+		}
+		Tech
+		{
+			id = heavyRocketry
+			state = Available
+			cost = 90
+			part = SYengine1mK1
+			part = liquidEngine2-2
+			part = engineLargeSkipper
+			part = MassiveBooster
+			part = KA.Converter.125.01
+			part = KA.Converter.250.01
+			part = KA.Engine.125.01
+			part = KA.Engine.250.01
+			part = KA.Engine.625.01
+			part = KA.Generator.250.01
+			part = KA.SRB.125.01
+			part = KA.SRB.125.02
+			part = KA.SRB.625.01
+			part = KA.SRB.625.02
+			part = KA.Tank.125.01
+			part = KA.Tank.125.02
+			part = KA.Tank.125.03
+			part = KA.Tank.125.04
+		}
+		Tech
+		{
+			id = spaceExploration
+			state = Available
+			cost = 90
+			part = crewCabin
+			part = ExSurveyStation
+			part = sensorBarometer
+			part = ladder1
+			part = US.1R320.Wedge.Food
+			part = US.1R340.Wedge.Oxygen
+			part = US.1R360.Wedge.Water
+		}
+		Tech
+		{
+			id = miniaturization
+			state = Available
+			cost = 90
+			part = NBdockingHelper0
+			part = pf.tech.fairing04m
+			part = adapterSmallMiniShort
+			part = adapterSmallMiniTall
+			part = stackSeparatorMini
+			part = dockingPort3
+		}
+		Tech
+		{
+			id = aerodynamicSystems
+			state = Available
+			cost = 90
+			part = NBcargoBay1m1
+			part = NB0mtankJet1
+			part = NB0mtankJet2
+			part = NBnoseAero0m
+			part = NBnoseAero1m
+			part = NBnoseBooster
+			part = NBpylonAero0
+			part = NBpylonAero1
+			part = NBpylonAero2
+			part = KzResizableFairingBaseRing
+			part = CircularIntake
+			part = pointyNoseConeA
+			part = airplaneTailB
+			part = fairingSize1
+			part = wingConnector
+			part = wingConnector3
+			part = deltaWing
+			part = structuralWing
+			part = structuralWing2
+			part = sweptWing1
+			part = sweptWing2
+			part = MK1Fuselage
+			part = MK1IntakeFuselage
+			part = KA.AtmScoop.125.01
+			part = KA.AtmScoop.250.01
+			part = KA.Jet.Radial.01
+			part = KA.Jet.Stack.01
+			part = KA.Tank.Radial.01
+			part = KA.Tank.VTS.01
+			part = LFKA.Jet.Radial.01
+			part = LFKA.Jet.Stack.01
+		}
+		Tech
+		{
+			id = advFuelSystems
+			state = Available
+			cost = 160
+			part = DavonStationLogisticsHub
+			part = KAS.CPort1
+			part = NBconeTank3m
+			part = NBmonoprop3m
+			part = NBwhiteJumbo
+			part = fuelTank3-2
+			part = RCSTank1-2
+			part = rcsTankMini
+			part = RCSFuelTank
+		}
+		Tech
+		{
+			id = precisionPropulsion
+			state = Available
+			cost = 160
+			part = mk2.OMSpod
+			part = NB0mMonoEngine1
+			part = NBflingatron
+			part = SYejectatron
+			part = smallRadialEngine
+			part = radialEngineMini
+			part = omsEngine
+			part = sepMotor1
+			part = toroidalFuelTank
+		}
+		Tech
+		{
+			id = heavierRocketry
+			state = Available
+			cost = 160
+			part = KF.RoverBodyLarge
+			part = SYengine2mM1
+			part = SYSRB.1875S
+			part = SYSRB.1875L
+			part = liquidEngine1-2
+			part = Size2LFB
+		}
+		Tech
+		{
+			id = advLanding
+			state = Available
+			cost = 160
+			part = BD.Adj.LG.Medium
+			part = HeatShield3
+			part = landingLeg1-2
+			part = radialDrogue
+			part = parachuteDrogue
+			part = GearMedium
+		}
+		Tech
+		{
+			id = commandModules
+			state = Available
+			cost = 160
+			part = cupola
+			part = Mark1-2Pod
+			part = mk2LanderCabin
+			part = ServiceBay.250
+		}
+		Tech
+		{
+			id = advElectrics
+			state = Available
+			cost = 160
+			part = LgRadialSolarPanel
+			part = KIS.electricScrewdriver
+			part = NBbatteryRadial1
+			part = solarPanels2
+			part = solarPanels4
+			part = solarPanels1
+			part = solarPanels3
+			part = ksp.r.largeBatteryPack
+			part = foldingRadMed
+		}
+		Tech
+		{
+			id = advConstruction
+			state = Available
+			cost = 90
+			part = Auger
+			part = SmallAuger
+			part = TinyAuger
+			part = ExMallet
+			part = ExOrbitalDock
+			part = ELRecycleBin
+			part = ELRecycleBin.Large
+			part = Smelter
+			part = SmallSmelter
+			part = TinySmelter
+			part = ExSurveyStake
+			part = ExWorkshop
+			part = KAS.Winch1
+			part = kis.concreteBase1
+			part = NBadapter2-1
+			part = NBflatAdapter2m
+			part = KzInterstageAdapter2
+			part = KzProcFairingFuselage1
+			part = KzProcFairingFuselage2
+			part = KzThrustPlate
+			part = SYplate2m1mX0
+			part = SYplate2m1mX1
+			part = rocketNoseCone
+			part = radialDecoupler1-2
+			part = radialDecoupler2
+			part = largeAdapter2
+			part = stackTriCoupler
+			part = kaRadialLeg
+			part = US.1C20.Wedge.Octocore
+			part = US.1R110.Wedge.KISContainer
+		}
 		Science
 		{
 			id = crewReport@KerbinSrfLandedLaunchPad
@@ -1813,9 +3724,9 @@ GAME
 			id = recovery@KerbinFlew
 			title = Recovery of a vessel that survived a flight.
 			dsc = 1
-			scv = 0.02777775
+			scv = 0.0001286666
 			sbv = 5
-			sci = 5.833333
+			sci = 5.999228
 			cap = 6
 		}
 		Science
@@ -1918,9 +3829,65 @@ GAME
 			sci = 8
 			cap = 9.6
 		}
-		ExpParts
+		Science
 		{
-			stackSeparatorMini = 1
+			id = evaReport@KerbinInSpaceLowGrasslands
+			title = EVA Report from space just above Kerbin's Grasslands
+			dsc = 1
+			scv = 0
+			sbv = 1
+			sci = 8
+			cap = 8
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinInSpaceLow
+			title = Materials Study while in space near Kerbin
+			dsc = 1
+			scv = 0.7265625
+			sbv = 1
+			sci = 8.75
+			cap = 32
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinInSpaceLow
+			title = Mystery Goo™ Observation while in space near Kerbin
+			dsc = 1
+			scv = 0.7484615
+			sbv = 1
+			sci = 3.27
+			cap = 13
+		}
+		Science
+		{
+			id = temperatureScan@KerbinInSpaceLow
+			title = Temperature Scan while in space near Kerbin
+			dsc = 1
+			scv = 0.5
+			sbv = 1
+			sci = 4
+			cap = 8
+		}
+		Science
+		{
+			id = temperatureScan@KerbinFlyingHigh
+			title = Temperature Scan from Kerbin's upper atmosphere
+			dsc = 1
+			scv = 0
+			sbv = 0.9
+			sci = 7.2
+			cap = 7.2
+		}
+		Science
+		{
+			id = recovery@KerbinOrbited
+			title = Recovery of a vessel returned from Kerbin orbit
+			dsc = 1
+			scv = 0.1666667
+			sbv = 10
+			sci = 10
+			cap = 12
 		}
 	}
 	SCENARIO
@@ -1932,7 +3899,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 140.2057
+		rep = 251.1832
 	}
 	SCENARIO
 	{
@@ -2014,12 +3981,136 @@ GAME
 		{
 			intact = True
 		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/VAB3
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/SouthComplex
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/SmallTanks
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/BigTanks
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/dish_array/dish_south
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/dish_array/dish_north
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/dish_array/dish_east
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/MainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/Tower
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/End09
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/End27
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section1
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section2
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section3
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section4
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section5
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_SE
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_NE
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_NW
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_SW
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/Tank
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/ksp_pad_waterTower
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/AstronautComplex/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_launchPad
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_sphereTank
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_waterTower
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/KSCFlagPoleLaunchPad
+		{
+			intact = True
+		}
 	}
 	SCENARIO
 	{
 		name = ScenarioDiscoverableObjects
 		scene = 7, 8, 5
-		lastSeed = 0
+		lastSeed = 1205968268
 		sizeCurve
 		{
 			key = 0 0 1.5 1.5
@@ -2034,27 +4125,27 @@ GAME
 		scene = 5, 6, 7, 8
 		SpaceCenter/LaunchPad
 		{
-			lvl = 0
+			lvl = 1
 		}
 		SpaceCenter/Runway
 		{
-			lvl = 0
+			lvl = 1
 		}
 		SpaceCenter/VehicleAssemblyBuilding
 		{
-			lvl = 0
+			lvl = 0.5
 		}
 		SpaceCenter/SpaceplaneHangar
 		{
-			lvl = 0
+			lvl = 1
 		}
 		SpaceCenter/TrackingStation
 		{
-			lvl = 0.5
+			lvl = 1
 		}
 		SpaceCenter/AstronautComplex
 		{
-			lvl = 0.5
+			lvl = 1
 		}
 		SpaceCenter/MissionControl
 		{
@@ -2079,963 +4170,273 @@ GAME
 		scene = 7, 8, 5
 		CONTRACT
 		{
-			guid = f992eb43-cea4-4e2c-ac6e-b96535034980
+			guid = b327c82a-7303-4029-b5e3-1ecc6aad77fa
 			type = ConfiguredContract
-			prestige = 1
-			seed = 731042296
+			prestige = 0
+			seed = 850774119
 			state = Withdrawn
-			agent = Research & Development Department
-			deadlineType = None
+			agent = Reaction Systems Ltd
+			deadlineType = Floating
 			expiryType = Floating
-			values = 115260,0,75000,125000,75000,125,35,0,0,0,0,0
-			subtype = ScanKerbinLoRes
-			title = Altimetry Scan of Kerbin
-			description = Our scientists have suggested that knowing what the rock we're flying around looks like might be a good idea. Perform an altimetry scan of Kerbin's surface and report back with the answer to the ultimate question, "Where did I put my keys?".
-			synopsis = Send an unkerbaled vessel into orbit, we suggest a 496km orbit with an 79.8 degree inclination, and scan Kerbin's surface with the SCAN Radar Altimetry Sensor. The key is getting the data we require, if you want to go with a custom orbit feel free but we didn't spend good money researching this one for no gorram reason!
+			values = 124740,16470715.8691406,15307,225369,15307,0,1,1,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = It seemed fine for a lab-suited employee prodding a squid with a pencil at Reaction Systems Ltd, that it was actually hard for us to tell if some Kerbals seem to enjoy things that terrify others. It is true that turning rockets upside-down was how we got into that situation in the first place... As you can imagine, we need your help.
+			synopsis = Perform a RADAR scan of Kerbin
 			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
-			notes = Tip: There's probably some other science equipment you can take along for some extra science!
-			hash = 906807492
-			PARAM
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
 			{
-				name = VesselParameterGroup
-				id = Maxwell1
-				state = Incomplete
-				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
-				title = 
-				notes = 
-				completedMessage = 
-				define = Maxwell I
-				duration = 23400
-				PARAM
-				{
-					name = HasCrew
-					id = HasCrew1
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = 
-					notes = 
-					completedMessage = 
-					allowStateReset = True
-					minCrew = 0
-					maxCrew = 0
-					minExperience = 0
-					maxExperience = 5
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = Unmanned
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = Unmanned
-						notes = 
-						completedMessage = 
-					}
-				}
-				PARAM
-				{
-					name = PartValidation
-					id = PartValidation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = 
-					notes = 
-					completedMessage = 
-					allowStateReset = True
-					minCount = 1
-					maxCount = 2147483647
-					FILTER
-					{
-						type = FILTER
-						part = SCANsat.Scanner
-					}
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = With type: SCAN RADAR Altimetry Sensor
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = With type: SCAN RADAR Altimetry Sensor
-						notes = 
-						completedMessage = 
-					}
-					PARAM
-					{
-						name = CountParameterDelegate`1
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = Count: At least 1 
-						notes = 
-						completedMessage = 
-					}
-				}
+				targetBody1 = CelestialBody:Kerbin
 			}
 			PARAM
 			{
 				name = SCANsatCoverage
-				id = SCANsatCoverage1
+				id = SCANsatCoverage
 				state = Incomplete
-				disableOnStateChange = False
 				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
+				ContractIdentifier = LoRes
 				title = 
 				notes = 
 				completedMessage = 
-				coverage = 50
+				coverage = 95
 				scanName = AltimetryLoRes
 				scanType = 1
 				targetBody = Kerbin
-			}
-			PARAM
-			{
-				name = OrbitParameter
-				id = Orbit
-				optional = True
-				state = Incomplete
-				disableOnStateChange = False
-				values = 93750,0,25,6,0
-				ContractIdentifier = ScanKerbinLoRes
-				title = (OPTIONAL)Achieve an orbit with the following parameters
-				notes = 
-				completedMessage = 
-				allowStateReset = True
-				situation = ORBITING
-				targetBody = Kerbin
-				minAltitude = 0
-				minApoapsis = 493234
-				maxApoapsis = 499314
-				minPeriapsis = 493101
-				maxPeriapsis = 499106
-				minEccentricity = 0
-				maxEccentricity = 0.0021
-				minInclination = 79.3
-				maxInclination = 80.3
-				minPeriod = 0
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Destination: Kerbin
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Destination: Kerbin
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Situation: Orbit
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Situation: Orbit
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Apoapsis: Between 493,234 m and 499,314 m
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Apoapsis: Between 493,234 m and 499,314 m
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Periapsis: Between 493,101 m and 499,106 m
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Periapsis: Between 493,101 m and 499,106 m
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Eccentricity: Below 0.0021
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Eccentricity: Below 0.0021
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Inclination: Between 79.3° and 80.3°
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Inclination: Between 79.3° and 80.3°
-					notes = 
-					completedMessage = 
-				}
 			}
 		}
 		CONTRACT
 		{
-			guid = efe44703-80f7-47f6-8f58-b9aed9555089
+			guid = bdc66b0f-c037-4c70-aa57-f080528048a6
 			type = ConfiguredContract
-			prestige = 1
-			seed = 805750882
+			prestige = 0
+			seed = 307891637
 			state = Withdrawn
-			agent = Research & Development Department
-			deadlineType = None
+			agent = Kerbal Motion LLC
+			deadlineType = Floating
 			expiryType = Floating
-			values = 42060,0,75000,125000,75000,125,35,0,0,0,0,0
-			subtype = ScanKerbinLoRes
-			title = Altimetry Scan of Kerbin
-			description = Our scientists have suggested that knowing what the rock we're flying around looks like might be a good idea. Perform an altimetry scan of Kerbin's surface and report back with the answer to the ultimate question, "Where did I put my keys?".
-			synopsis = Send an unkerbaled vessel into orbit, we suggest a 496km orbit with an 79.8 degree inclination, and scan Kerbin's surface with the SCAN Radar Altimetry Sensor. The key is getting the data we require, if you want to go with a custom orbit feel free but we didn't spend good money researching this one for no gorram reason!
+			values = 63960,11198140.5761719,15876,221739,15876,0,1,1,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = Following creating rapid unplanned disassembly, technicians at our company decided that a mission involving 'Science-stuff' will solve all of our moronic problems. We now need your help.
+			synopsis = Perform a RADAR scan of Kerbin
 			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
-			notes = Tip: There's probably some other science equipment you can take along for some extra science!
-			hash = 906807492
-			PARAM
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
 			{
-				name = VesselParameterGroup
-				id = Maxwell1
-				state = Incomplete
-				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
-				title = 
-				notes = 
-				completedMessage = 
-				define = Maxwell I
-				duration = 23400
-				PARAM
-				{
-					name = HasCrew
-					id = HasCrew1
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = 
-					notes = 
-					completedMessage = 
-					allowStateReset = True
-					minCrew = 0
-					maxCrew = 0
-					minExperience = 0
-					maxExperience = 5
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = Unmanned
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = Unmanned
-						notes = 
-						completedMessage = 
-					}
-				}
-				PARAM
-				{
-					name = PartValidation
-					id = PartValidation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = 
-					notes = 
-					completedMessage = 
-					allowStateReset = True
-					minCount = 1
-					maxCount = 2147483647
-					FILTER
-					{
-						type = FILTER
-						part = SCANsat.Scanner
-					}
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = With type: SCAN RADAR Altimetry Sensor
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = With type: SCAN RADAR Altimetry Sensor
-						notes = 
-						completedMessage = 
-					}
-					PARAM
-					{
-						name = CountParameterDelegate`1
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = Count: At least 1 
-						notes = 
-						completedMessage = 
-					}
-				}
+				targetBody1 = CelestialBody:Kerbin
 			}
 			PARAM
 			{
 				name = SCANsatCoverage
-				id = SCANsatCoverage1
+				id = SCANsatCoverage
 				state = Incomplete
-				disableOnStateChange = False
 				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
+				ContractIdentifier = LoRes
 				title = 
 				notes = 
 				completedMessage = 
-				coverage = 50
+				coverage = 95
 				scanName = AltimetryLoRes
 				scanType = 1
 				targetBody = Kerbin
-			}
-			PARAM
-			{
-				name = OrbitParameter
-				id = Orbit
-				optional = True
-				state = Incomplete
-				disableOnStateChange = False
-				values = 93750,0,25,6,0
-				ContractIdentifier = ScanKerbinLoRes
-				title = (OPTIONAL)Achieve an orbit with the following parameters
-				notes = 
-				completedMessage = 
-				allowStateReset = True
-				situation = ORBITING
-				targetBody = Kerbin
-				minAltitude = 0
-				minApoapsis = 493234
-				maxApoapsis = 499314
-				minPeriapsis = 493101
-				maxPeriapsis = 499106
-				minEccentricity = 0
-				maxEccentricity = 0.0021
-				minInclination = 79.3
-				maxInclination = 80.3
-				minPeriod = 0
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Destination: Kerbin
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Destination: Kerbin
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Situation: Orbit
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Situation: Orbit
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Apoapsis: Between 493,234 m and 499,314 m
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Apoapsis: Between 493,234 m and 499,314 m
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Periapsis: Between 493,101 m and 499,106 m
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Periapsis: Between 493,101 m and 499,106 m
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Eccentricity: Below 0.0021
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Eccentricity: Below 0.0021
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Inclination: Between 79.3° and 80.3°
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Inclination: Between 79.3° and 80.3°
-					notes = 
-					completedMessage = 
-				}
 			}
 		}
 		CONTRACT
 		{
-			guid = ff2b6bab-4f62-4a2d-a718-bf3368e4c018
+			guid = c328f199-5cde-4696-a2a6-fe8e504e15f8
 			type = ConfiguredContract
-			prestige = 1
-			seed = 2090693204
+			prestige = 0
+			seed = 111077091
 			state = Withdrawn
-			agent = Research & Development Department
-			deadlineType = None
+			agent = Kerbin World-Firsts Record-Keeping Society
+			deadlineType = Floating
 			expiryType = Floating
-			values = 150420,0,75000,125000,75000,125,35,0,0,0,0,0
-			subtype = ScanKerbinLoRes
-			title = Altimetry Scan of Kerbin
-			description = Our scientists have suggested that knowing what the rock we're flying around looks like might be a good idea. Perform an altimetry scan of Kerbin's surface and report back with the answer to the ultimate question, "Where did I put my keys?".
-			synopsis = Send an unkerbaled vessel into orbit, we suggest a 496km orbit with an 79.8 degree inclination, and scan Kerbin's surface with the SCAN Radar Altimetry Sensor. The key is getting the data we require, if you want to go with a custom orbit feel free but we didn't spend good money researching this one for no gorram reason!
+			values = 93540,20823690.6738281,13179,235531,13179,0,1,1,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = Following our new reality show's fine premiere, a scientist at our company decided that a mission involving 'Science-stuff' will solve all of our idiotic problems. This is where you come in.
+			synopsis = Perform a RADAR scan of Kerbin
 			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
-			notes = Tip: There's probably some other science equipment you can take along for some extra science!
-			hash = 906807492
-			PARAM
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
 			{
-				name = VesselParameterGroup
-				id = Maxwell1
-				state = Incomplete
-				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
-				title = 
-				notes = 
-				completedMessage = 
-				define = Maxwell I
-				duration = 23400
-				PARAM
-				{
-					name = HasCrew
-					id = HasCrew1
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = 
-					notes = 
-					completedMessage = 
-					allowStateReset = True
-					minCrew = 0
-					maxCrew = 0
-					minExperience = 0
-					maxExperience = 5
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = Unmanned
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = Unmanned
-						notes = 
-						completedMessage = 
-					}
-				}
-				PARAM
-				{
-					name = PartValidation
-					id = PartValidation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = 
-					notes = 
-					completedMessage = 
-					allowStateReset = True
-					minCount = 1
-					maxCount = 2147483647
-					FILTER
-					{
-						type = FILTER
-						part = SCANsat.Scanner
-					}
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = With type: SCAN RADAR Altimetry Sensor
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = With type: SCAN RADAR Altimetry Sensor
-						notes = 
-						completedMessage = 
-					}
-					PARAM
-					{
-						name = CountParameterDelegate`1
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = Count: At least 1 
-						notes = 
-						completedMessage = 
-					}
-				}
+				targetBody1 = CelestialBody:Kerbin
 			}
 			PARAM
 			{
 				name = SCANsatCoverage
-				id = SCANsatCoverage1
+				id = SCANsatCoverage
 				state = Incomplete
-				disableOnStateChange = False
 				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
+				ContractIdentifier = LoRes
 				title = 
 				notes = 
 				completedMessage = 
-				coverage = 50
+				coverage = 95
 				scanName = AltimetryLoRes
 				scanType = 1
 				targetBody = Kerbin
-			}
-			PARAM
-			{
-				name = OrbitParameter
-				id = Orbit
-				optional = True
-				state = Incomplete
-				disableOnStateChange = False
-				values = 93750,0,25,6,0
-				ContractIdentifier = ScanKerbinLoRes
-				title = (OPTIONAL)Achieve an orbit with the following parameters
-				notes = 
-				completedMessage = 
-				allowStateReset = True
-				situation = ORBITING
-				targetBody = Kerbin
-				minAltitude = 0
-				minApoapsis = 493234
-				maxApoapsis = 499314
-				minPeriapsis = 493101
-				maxPeriapsis = 499106
-				minEccentricity = 0
-				maxEccentricity = 0.0021
-				minInclination = 79.3
-				maxInclination = 80.3
-				minPeriod = 0
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Destination: Kerbin
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Destination: Kerbin
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Situation: Orbit
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Situation: Orbit
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Apoapsis: Between 493,234 m and 499,314 m
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Apoapsis: Between 493,234 m and 499,314 m
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Periapsis: Between 493,101 m and 499,106 m
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Periapsis: Between 493,101 m and 499,106 m
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Eccentricity: Below 0.0021
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Eccentricity: Below 0.0021
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Inclination: Between 79.3° and 80.3°
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Inclination: Between 79.3° and 80.3°
-					notes = 
-					completedMessage = 
-				}
 			}
 		}
 		CONTRACT
 		{
-			guid = 9209d7f9-ab5f-4515-9eb2-ec6d3f068492
+			guid = 78f650ce-a5c6-4c3c-b115-05612f9fa425
 			type = ConfiguredContract
-			prestige = 1
-			seed = 121139335
+			prestige = 0
+			seed = 1371029077
 			state = Withdrawn
-			agent = Research & Development Department
-			deadlineType = None
+			agent = Probodobodyne Inc
+			deadlineType = Floating
 			expiryType = Floating
-			values = 96120,0,75000,125000,75000,125,35,0,0,0,0,0
-			subtype = ScanKerbinLoRes
-			title = Altimetry Scan of Kerbin
-			description = Our scientists have suggested that knowing what the rock we're flying around looks like might be a good idea. Perform an altimetry scan of Kerbin's surface and report back with the answer to the ultimate question, "Where did I put my keys?".
-			synopsis = Send an unkerbaled vessel into orbit, we suggest a 496km orbit with an 79.8 degree inclination, and scan Kerbin's surface with the SCAN Radar Altimetry Sensor. The key is getting the data we require, if you want to go with a custom orbit feel free but we didn't spend good money researching this one for no gorram reason!
+			values = 75720,16082550,32018,293521,32018,0,1,1,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = It is well known that avoiding exploding at the slightest provocation is clearly our sixth or seventh highest priority here at Probodobodyne Inc. We think that fuelling a rocket without anything exploding may help, as a result of that apparently incredible chain of events, you were our first name on the list.
+			synopsis = Perform a RADAR scan of Kerbin
 			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
-			notes = Tip: There's probably some other science equipment you can take along for some extra science!
-			hash = 906807492
-			PARAM
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
 			{
-				name = VesselParameterGroup
-				id = Maxwell1
-				state = Incomplete
-				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
-				title = 
-				notes = 
-				completedMessage = 
-				define = Maxwell I
-				duration = 23400
-				PARAM
-				{
-					name = HasCrew
-					id = HasCrew1
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = 
-					notes = 
-					completedMessage = 
-					allowStateReset = True
-					minCrew = 0
-					maxCrew = 0
-					minExperience = 0
-					maxExperience = 5
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = Unmanned
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = Unmanned
-						notes = 
-						completedMessage = 
-					}
-				}
-				PARAM
-				{
-					name = PartValidation
-					id = PartValidation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = 
-					notes = 
-					completedMessage = 
-					allowStateReset = True
-					minCount = 1
-					maxCount = 2147483647
-					FILTER
-					{
-						type = FILTER
-						part = SCANsat.Scanner
-					}
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = With type: SCAN RADAR Altimetry Sensor
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = With type: SCAN RADAR Altimetry Sensor
-						notes = 
-						completedMessage = 
-					}
-					PARAM
-					{
-						name = CountParameterDelegate`1
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = Count: At least 1 
-						notes = 
-						completedMessage = 
-					}
-				}
+				targetBody1 = CelestialBody:Kerbin
 			}
 			PARAM
 			{
 				name = SCANsatCoverage
-				id = SCANsatCoverage1
+				id = SCANsatCoverage
 				state = Incomplete
-				disableOnStateChange = False
 				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
+				ContractIdentifier = LoRes
 				title = 
 				notes = 
 				completedMessage = 
-				coverage = 50
+				coverage = 95
 				scanName = AltimetryLoRes
 				scanType = 1
 				targetBody = Kerbin
-			}
-			PARAM
-			{
-				name = OrbitParameter
-				id = Orbit
-				optional = True
-				state = Incomplete
-				disableOnStateChange = False
-				values = 93750,0,25,6,0
-				ContractIdentifier = ScanKerbinLoRes
-				title = (OPTIONAL)Achieve an orbit with the following parameters
-				notes = 
-				completedMessage = 
-				allowStateReset = True
-				situation = ORBITING
-				targetBody = Kerbin
-				minAltitude = 0
-				minApoapsis = 493234
-				maxApoapsis = 499314
-				minPeriapsis = 493101
-				maxPeriapsis = 499106
-				minEccentricity = 0
-				maxEccentricity = 0.0021
-				minInclination = 79.3
-				maxInclination = 80.3
-				minPeriod = 0
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Destination: Kerbin
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Destination: Kerbin
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Situation: Orbit
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Situation: Orbit
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Apoapsis: Between 493,234 m and 499,314 m
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Apoapsis: Between 493,234 m and 499,314 m
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Periapsis: Between 493,101 m and 499,106 m
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Periapsis: Between 493,101 m and 499,106 m
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Eccentricity: Below 0.0021
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Eccentricity: Below 0.0021
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Inclination: Between 79.3° and 80.3°
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Inclination: Between 79.3° and 80.3°
-					notes = 
-					completedMessage = 
-				}
 			}
 		}
 		CONTRACT
 		{
-			guid = d3252388-9772-4439-8777-fb522e50c6bd
+			guid = 8da90b3b-9df3-4e6d-baab-d5b29c85c815
 			type = ConfiguredContract
-			prestige = 1
-			seed = 1048871409
+			prestige = 0
+			seed = 347174128
 			state = Withdrawn
-			agent = Research & Development Department
-			deadlineType = None
+			agent = Experimental Engineering Group
+			deadlineType = Floating
 			expiryType = Floating
-			values = 92040,0,75000,125000,75000,125,35,0,0,0,0,0
-			subtype = ScanKerbinLoRes
-			title = Altimetry Scan of Kerbin
-			description = Our scientists have suggested that knowing what the rock we're flying around looks like might be a good idea. Perform an altimetry scan of Kerbin's surface and report back with the answer to the ultimate question, "Where did I put my keys?".
-			synopsis = Send an unkerbaled vessel into orbit, we suggest a 496km orbit with an 79.8 degree inclination, and scan Kerbin's surface with the SCAN Radar Altimetry Sensor. The key is getting the data we require, if you want to go with a custom orbit feel free but we didn't spend good money researching this one for no gorram reason!
+			values = 94980,14082833.4960938,35244,279160,35244,0,1,1,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = It is well known that meeting safety standards is exactly our sixth or seventh highest priority here at Experimental Engineering Group. We think that meeting new goals and deadlines may help, as a result of that apparently acceptable chain of events, we need your help.
+			synopsis = Perform a RADAR scan of Kerbin
 			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
-			notes = Tip: There's probably some other science equipment you can take along for some extra science!
-			hash = 906807492
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
+			{
+				targetBody1 = CelestialBody:Kerbin
+			}
 			PARAM
 			{
-				name = VesselParameterGroup
-				id = Maxwell1
+				name = SCANsatCoverage
+				id = SCANsatCoverage
 				state = Incomplete
 				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
+				ContractIdentifier = LoRes
 				title = 
 				notes = 
 				completedMessage = 
-				define = Maxwell I
-				duration = 23400
+				coverage = 95
+				scanName = AltimetryLoRes
+				scanType = 1
+				targetBody = Kerbin
+			}
+		}
+		CONTRACT
+		{
+			guid = 0e2ce9c9-2716-4c9f-88cd-e37415962153
+			type = ConfiguredContract
+			prestige = 1
+			seed = 2072947406
+			state = Withdrawn
+			agent = Kerbal Space Tourism
+			deadlineType = None
+			expiryType = Floating
+			values = 133980,0,0,500000,0,0,1,25,0,0,0,0
+			subtype = Tourism_FirstTourist
+			title = Tourism: Kick off space tourism
+			description = We've been offered an interesting opportunity. Millionnaire Tito Kerman dreams of going to space. Unlike most Kerbals who simply show up at the astronaut complex, Tito is willing to pay his way into space. A new corporation has been set up for space tourists, all we have to do is bring one extra Kerbal to space for 4 hours. We were going there anyway...
+			synopsis = Help Tito Kerman visit space.
+			completedMessage = Tito's funds are going to spend very well!
+			notes = 
+			hash = 817831556
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.SpawnPassengers
+				count = 1
+				gender = Male
+				kerbalType = Tourist
+				potentialPassenger = Tito Kerman
+			}
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.Expression
+				CONTRACT_ACCEPTED
+				{
+				}
+				CONTRACT_COMPLETED_SUCCESS
+				{
+					TouristCount = 1
+					TouristLowOrbitCount = 1
+				}
+				CONTRACT_COMPLETED_FAILURE
+				{
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = Tourism_FirstTourist
+				title = 
+				notes = 
+				completedMessage = 
+				define = 
+				duration = 14400
 				PARAM
 				{
 					name = HasCrew
-					id = HasCrew1
+					id = HasCrew
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
+					ContractIdentifier = Tourism_FirstTourist
 					title = 
 					notes = 
 					completedMessage = 
 					allowStateReset = True
-					minCrew = 0
-					maxCrew = 0
+					trait = Pilot
+					minCrew = 1
+					maxCrew = 2147483647
 					minExperience = 0
 					maxExperience = 5
 					PARAM
 					{
 						name = ParameterDelegate`1
-						id = Unmanned
+						id = Trait: Pilot
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = Unmanned
-						notes = 
-						completedMessage = 
-					}
-				}
-				PARAM
-				{
-					name = PartValidation
-					id = PartValidation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = 
-					notes = 
-					completedMessage = 
-					allowStateReset = True
-					minCount = 1
-					maxCount = 2147483647
-					FILTER
-					{
-						type = FILTER
-						part = SCANsat.Scanner
-					}
-					PARAM
-					{
-						name = ParameterDelegate`1
-						id = With type: SCAN RADAR Altimetry Sensor
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
-						title = With type: SCAN RADAR Altimetry Sensor
+						ContractIdentifier = Tourism_FirstTourist
+						title = Trait: Pilot
 						notes = 
 						completedMessage = 
 					}
@@ -3045,8 +4446,80 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = ScanKerbinLoRes
+						ContractIdentifier = Tourism_FirstTourist
 						title = Count: At least 1 
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = HasPassengers
+					id = HasPassengers
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = Tourism_FirstTourist
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					count = 0
+				}
+				PARAM
+				{
+					name = OrbitParameter
+					id = Orbit
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = Tourism_FirstTourist
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					situation = ORBITING
+					targetBody = Kerbin
+					minAltitude = 0
+					minApoapsis = 0
+					minPeriapsis = 75000
+					minEccentricity = 0
+					minInclination = 0
+					maxInclination = 180
+					minPeriod = 0
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Kerbin
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Situation: Orbit
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Situation: Orbit
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Periapsis: Above 75,000 m
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Periapsis: Above 75,000 m
 						notes = 
 						completedMessage = 
 					}
@@ -3054,117 +4527,647 @@ GAME
 			}
 			PARAM
 			{
-				name = SCANsatCoverage
-				id = SCANsatCoverage1
+				name = RecoverKerbalCustom
+				id = RecoverKerbal
 				state = Incomplete
-				disableOnStateChange = False
 				values = 0,0,0,0,0
-				ContractIdentifier = ScanKerbinLoRes
+				ContractIdentifier = Tourism_FirstTourist
 				title = 
 				notes = 
 				completedMessage = 
-				coverage = 50
+				completeInSequence = True
+				count = 0
+				index = 0
+			}
+		}
+		CONTRACT
+		{
+			guid = b9fb1225-55ba-42ea-bd9f-27deaeb6aa59
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1493281569
+			state = Withdrawn
+			agent = Goliath National Products
+			deadlineType = Floating
+			expiryType = Floating
+			values = 54180,16947921.09375,7740,311834,7740,0,1,1,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = Resulting in an intriguing data set on a snack delivery truck crash, a visitor visiting Goliath National Products decided enough was enough, and slowly became more sure that the media were reporting multiple incidences of unintentionally performing high-demand stress-testing. This gave us the venerable idea that we need your help.
+			synopsis = Perform a RADAR scan of Kerbin
+			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
+			{
+				targetBody1 = CelestialBody:Kerbin
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = LoRes
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 95
 				scanName = AltimetryLoRes
 				scanType = 1
 				targetBody = Kerbin
 			}
+		}
+		CONTRACT
+		{
+			guid = 26b58257-9679-4b74-b203-835cd38ca83e
+			type = ConfiguredContract
+			prestige = 1
+			seed = 954311506
+			state = Withdrawn
+			agent = Kerbal Space Tourism
+			deadlineType = None
+			expiryType = Floating
+			values = 114780,0,0,500000,0,0,1,25,0,0,0,0
+			subtype = Tourism_FirstTourist
+			title = Tourism: Kick off space tourism
+			description = We've been offered an interesting opportunity. Millionnaire Tito Kerman dreams of going to space. Unlike most Kerbals who simply show up at the astronaut complex, Tito is willing to pay his way into space. A new corporation has been set up for space tourists, all we have to do is bring one extra Kerbal to space for 4 hours. We were going there anyway...
+			synopsis = Help Tito Kerman visit space.
+			completedMessage = Tito's funds are going to spend very well!
+			notes = 
+			hash = 817831556
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.SpawnPassengers
+				count = 1
+				gender = Male
+				kerbalType = Tourist
+				potentialPassenger = Tito Kerman
+			}
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.Expression
+				CONTRACT_ACCEPTED
+				{
+				}
+				CONTRACT_COMPLETED_SUCCESS
+				{
+					TouristCount = 1
+					TouristLowOrbitCount = 1
+				}
+				CONTRACT_COMPLETED_FAILURE
+				{
+				}
+			}
 			PARAM
 			{
-				name = OrbitParameter
-				id = Orbit
-				optional = True
+				name = VesselParameterGroup
+				id = VesselParameterGroup
 				state = Incomplete
-				disableOnStateChange = False
-				values = 93750,0,25,6,0
-				ContractIdentifier = ScanKerbinLoRes
-				title = (OPTIONAL)Achieve an orbit with the following parameters
+				values = 0,0,0,0,0
+				ContractIdentifier = Tourism_FirstTourist
+				title = 
 				notes = 
 				completedMessage = 
-				allowStateReset = True
-				situation = ORBITING
+				define = 
+				duration = 14400
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = Tourism_FirstTourist
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					trait = Pilot
+					minCrew = 1
+					maxCrew = 2147483647
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Trait: Pilot
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Trait: Pilot
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = CountParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Count: At least 1 
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = HasPassengers
+					id = HasPassengers
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = Tourism_FirstTourist
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					count = 0
+				}
+				PARAM
+				{
+					name = OrbitParameter
+					id = Orbit
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = Tourism_FirstTourist
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					situation = ORBITING
+					targetBody = Kerbin
+					minAltitude = 0
+					minApoapsis = 0
+					minPeriapsis = 75000
+					minEccentricity = 0
+					minInclination = 0
+					maxInclination = 180
+					minPeriod = 0
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Kerbin
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Situation: Orbit
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Situation: Orbit
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Periapsis: Above 75,000 m
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Periapsis: Above 75,000 m
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			PARAM
+			{
+				name = RecoverKerbalCustom
+				id = RecoverKerbal
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = Tourism_FirstTourist
+				title = 
+				notes = 
+				completedMessage = 
+				completeInSequence = True
+				count = 0
+				index = 0
+			}
+		}
+		CONTRACT
+		{
+			guid = 9a9351f9-76a7-449a-869b-4ced9f26c831
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1575303481
+			state = Withdrawn
+			agent = Modular Rocket Systems
+			deadlineType = Floating
+			expiryType = Floating
+			values = 34860,13141953.3691406,20855,270192,20855,0,1,1,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = It seemed amazing to the director of the sales department inspecting the factory floor at Modular Rocket Systems's labs that our records showed an unusual amount of fuelling a rocket without anything exploding so we were the only people thought capable of fulfilling all their requirements. We couldn't refuse something like that, and, you seem up for the challenge.
+			synopsis = Perform a RADAR scan of Kerbin
+			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
+			{
+				targetBody1 = CelestialBody:Kerbin
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = LoRes
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 95
+				scanName = AltimetryLoRes
+				scanType = 1
 				targetBody = Kerbin
-				minAltitude = 0
-				minApoapsis = 493234
-				maxApoapsis = 499314
-				minPeriapsis = 493101
-				maxPeriapsis = 499106
-				minEccentricity = 0
-				maxEccentricity = 0.0021
-				minInclination = 79.3
-				maxInclination = 80.3
-				minPeriod = 0
+			}
+		}
+		CONTRACT
+		{
+			guid = 35def99f-1054-4ed4-bbc4-a15dc28f8f95
+			type = ConfiguredContract
+			prestige = 1
+			seed = 216280900
+			state = Withdrawn
+			agent = Kerbal Space Tourism
+			deadlineType = None
+			expiryType = Floating
+			values = 79680,0,0,500000,0,0,1,25,0,0,0,0
+			subtype = Tourism_FirstTourist
+			title = Tourism: Kick off space tourism
+			description = We've been offered an interesting opportunity. Millionnaire Tito Kerman dreams of going to space. Unlike most Kerbals who simply show up at the astronaut complex, Tito is willing to pay his way into space. A new corporation has been set up for space tourists, all we have to do is bring one extra Kerbal to space for 4 hours. We were going there anyway...
+			synopsis = Help Tito Kerman visit space.
+			completedMessage = Tito's funds are going to spend very well!
+			notes = 
+			hash = 817831556
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.SpawnPassengers
+				count = 1
+				gender = Male
+				kerbalType = Tourist
+				potentialPassenger = Tito Kerman
+			}
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.Expression
+				CONTRACT_ACCEPTED
+				{
+				}
+				CONTRACT_COMPLETED_SUCCESS
+				{
+					TouristCount = 1
+					TouristLowOrbitCount = 1
+				}
+				CONTRACT_COMPLETED_FAILURE
+				{
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = Tourism_FirstTourist
+				title = 
+				notes = 
+				completedMessage = 
+				define = 
+				duration = 14400
 				PARAM
 				{
-					name = ParameterDelegate`1
-					id = Destination: Kerbin
+					name = HasCrew
+					id = HasCrew
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Destination: Kerbin
+					ContractIdentifier = Tourism_FirstTourist
+					title = 
 					notes = 
 					completedMessage = 
+					allowStateReset = True
+					trait = Pilot
+					minCrew = 1
+					maxCrew = 2147483647
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Trait: Pilot
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Trait: Pilot
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = CountParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Count: At least 1 
+						notes = 
+						completedMessage = 
+					}
 				}
 				PARAM
 				{
-					name = ParameterDelegate`1
-					id = Situation: Orbit
+					name = HasPassengers
+					id = HasPassengers
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Situation: Orbit
+					ContractIdentifier = Tourism_FirstTourist
+					title = 
 					notes = 
 					completedMessage = 
+					allowStateReset = True
+					count = 0
 				}
 				PARAM
 				{
-					name = ParameterDelegate`1
-					id = Apoapsis: Between 493,234 m and 499,314 m
+					name = OrbitParameter
+					id = Orbit
 					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Apoapsis: Between 493,234 m and 499,314 m
+					ContractIdentifier = Tourism_FirstTourist
+					title = 
 					notes = 
 					completedMessage = 
+					allowStateReset = True
+					situation = ORBITING
+					targetBody = Kerbin
+					minAltitude = 0
+					minApoapsis = 0
+					minPeriapsis = 75000
+					minEccentricity = 0
+					minInclination = 0
+					maxInclination = 180
+					minPeriod = 0
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Kerbin
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Situation: Orbit
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Situation: Orbit
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Periapsis: Above 75,000 m
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = Tourism_FirstTourist
+						title = Periapsis: Above 75,000 m
+						notes = 
+						completedMessage = 
+					}
 				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Periapsis: Between 493,101 m and 499,106 m
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Periapsis: Between 493,101 m and 499,106 m
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Eccentricity: Below 0.0021
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Eccentricity: Below 0.0021
-					notes = 
-					completedMessage = 
-				}
-				PARAM
-				{
-					name = ParameterDelegate`1
-					id = Inclination: Between 79.3° and 80.3°
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					ContractIdentifier = ScanKerbinLoRes
-					title = Inclination: Between 79.3° and 80.3°
-					notes = 
-					completedMessage = 
-				}
+			}
+			PARAM
+			{
+				name = RecoverKerbalCustom
+				id = RecoverKerbal
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = Tourism_FirstTourist
+				title = 
+				notes = 
+				completedMessage = 
+				completeInSequence = True
+				count = 0
+				index = 0
+			}
+		}
+		CONTRACT
+		{
+			guid = c2fe3953-8427-4242-9b81-8be6a8e371c2
+			type = ConfiguredContract
+			prestige = 2
+			seed = 702901190
+			state = Withdrawn
+			agent = Umbra Space Industries
+			deadlineType = Floating
+			expiryType = Floating
+			values = 92580,11761438.6230469,13567,402591,13567,0,2,2,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = A few days prior to unintentionally performing high-demand stress-testing, The top Kerbals from Umbra Space Industries believe that it's about time to admit that we actually had a big plan after all. Now that we know this, a worried-looking crew can put forth this contract.
+			synopsis = Perform a RADAR scan of Kerbin
+			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
+			{
+				targetBody1 = CelestialBody:Kerbin
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = LoRes
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 95
+				scanName = AltimetryLoRes
+				scanType = 1
+				targetBody = Kerbin
+			}
+		}
+		CONTRACT
+		{
+			guid = 6943fd73-cdb0-415c-aec3-647690ca5dc5
+			type = ConfiguredContract
+			prestige = 2
+			seed = 540314463
+			state = Withdrawn
+			agent = Kerbal Motion LLC
+			deadlineType = Floating
+			expiryType = Floating
+			values = 149160,13804308.984375,53527,411956,53527,0,2,2,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = In the aftermath of watching a movie en route to the KSC, new ideas were sought for the way we would often be undergoing rapid unplanned disassembly. An apparently relaxed team showed us a blue science point and we were inevitably certain that we should study Science and Science accessories, we need your help.
+			synopsis = Perform a RADAR scan of Kerbin
+			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
+			{
+				targetBody1 = CelestialBody:Kerbin
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = LoRes
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 95
+				scanName = AltimetryLoRes
+				scanType = 1
+				targetBody = Kerbin
+			}
+		}
+		CONTRACT
+		{
+			guid = 1d593efa-4974-463b-86fc-1d6a3d54aa8b
+			type = ConfiguredContract
+			prestige = 2
+			seed = 2132447611
+			state = Withdrawn
+			agent = Research & Development Department
+			deadlineType = Floating
+			expiryType = Floating
+			values = 59940,17044744.0429688,702,449049,2763,0,2,2,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = The engineering department making a big mess at Research & Development Department's labs tried to prove to everyone that some Kerbals seem to enjoy high speeds, while others apparently just don't. Now, that allegedly ended up raising more questions than answers, and you need to do some tests.
+			synopsis = Perform a RADAR scan of Kerbin
+			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
+			{
+				targetBody1 = CelestialBody:Kerbin
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = LoRes
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 95
+				scanName = AltimetryLoRes
+				scanType = 1
+				targetBody = Kerbin
+			}
+		}
+		CONTRACT
+		{
+			guid = f373070f-61f7-41f6-8dcc-b94e362e9189
+			type = ConfiguredContract
+			prestige = 2
+			seed = 1737643027
+			state = Withdrawn
+			agent = Zaltonic Electronics
+			deadlineType = Floating
+			expiryType = Floating
+			values = 70860,16884418.359375,20877,323084,20877,0,2,2,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = It seemed brilliant to the sales department at Zaltonic Electronics that the media were reporting multiple incidences of coming in below budget so we were the only people thought capable of suceeding where so many others have failed. We couldn't refuse something like that, and, you seem up for the challenge.
+			synopsis = Perform a RADAR scan of Kerbin
+			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
+			{
+				targetBody1 = CelestialBody:Kerbin
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = LoRes
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 95
+				scanName = AltimetryLoRes
+				scanType = 1
+				targetBody = Kerbin
+			}
+		}
+		CONTRACT
+		{
+			guid = 264bb302-5e1e-4945-a7f0-db7d8f1ac23f
+			type = ConfiguredContract
+			prestige = 2
+			seed = 1296159267
+			state = Withdrawn
+			agent = Zaltonic Electronics
+			deadlineType = Floating
+			expiryType = Floating
+			values = 132360,13581449.5605469,38189,355566,38189,0,2,2,0,0,0,0
+			subtype = LoRes
+			title = Do a Low Resolution Scan of Kerbin
+			description = After an initially disappointing study on losing the plans to our latest design, the director of the sales department passing by Zaltonic Electronics started testing whether our records showed an unusual amount of underestimating how volatile standard-grade solid rocket fuel really is. This gave us the genius idea that we now need your help.
+			synopsis = Perform a RADAR scan of Kerbin
+			completedMessage = Excellent work, despite the grainy monochrome image we've recovered our experts are very excited to see what they can find.
+			notes = 
+			hash = 1685766237
+			UNIQUE_DATA
+			{
+				targetBody1 = CelestialBody:Kerbin
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = LoRes
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 95
+				scanName = AltimetryLoRes
+				scanType = 1
+				targetBody = Kerbin
 			}
 		}
 	}
@@ -4300,6 +6303,11 @@ GAME
 				TypeName = WorldFirstContract
 				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
 			}
+			Contract_Type
+			{
+				TypeName = SentinelContract
+				ContractValues = 1.000,1.000,1.000,1.000,1.000,1.000,1.000,10.0,10.0
+			}
 		}
 		Parameter_Types
 		{
@@ -4500,6 +6508,11 @@ GAME
 			}
 			Parameter_Type
 			{
+				TypeName = SentinelParameter
+				ParameterValues = 1.000,1.000,1.000,1.000,1.000
+			}
+			Parameter_Type
+			{
 				TypeName = HasAstronaut
 				ParameterValues = 1.000,1.000,1.000,1.000,1.000
 			}
@@ -4683,12 +6696,12 @@ GAME
 		windowSize = 0
 		Contracts_Window_Parameters
 		{
-			WindowPosition = 50,80,250,300,382,205,250,300,50,80,250,300,50,80,250,300
-			WindowVisible = True,True,False,False
+			WindowPosition = 133,248,250,528,382,205,250,300,50,80,250,300,50,80,250,300
+			WindowVisible = True,False,False,False
 			Contracts_Window_Mission
 			{
 				MissionName = MasterMission
-				ActiveListID = 2cdc656a-9adc-41e4-aec7-22d23b533bc8|N|True,c9c596fb-74a6-4b92-b9d3-39a5153f24e2|N|True,937d0591-16fd-460f-95d0-4792e738fd12|N|True,d99b94b5-8e1b-48e1-a8ac-b8878161fa4b|N|True,8ea94ffb-3cbf-4b14-8088-913beb590fb0|N|True
+				ActiveListID = 65b380c8-090b-442d-acf2-88c89822350d|N|True,0a1ce06d-9fd1-4f40-be29-88a6f55aa185|N|True,7f6363a6-e029-4c70-b8ad-a4ec598a2c5b|N|True,f863930f-11e1-4634-becb-24ea65998ea7|N|True,a5afb8a8-8107-4bb1-a0b4-924919e066ce|N|True
 				HiddenListID = 
 				VesselIDs = 
 				AscendingSort = True
@@ -4717,8 +6730,8 @@ GAME
 			KACAction = KillWarp
 			ShipInfo
 			{
-				rect = 1504,282,300,409
-				visible = True
+				rect = 332,585,300,409
+				visible = False
 			}
 			BuildWindow
 			{
@@ -4758,6 +6771,31 @@ GAME
 			{
 				experience
 				{
+					_current = Passenger
+					Passenger
+					{
+						_current = Kerbin
+						Kerbin
+						{
+							_current = LANDED
+							_currentUT = 11005.619853609
+							PRELAUNCH = 933.84000002038283
+							FLYING = 836.6000000182612
+							SUB_ORBITAL = 1045.7316406344762
+							ORBITING = 2248.3428515953183
+							LANDED = 6.8800000001501758
+						}
+					}
+					EVA
+					{
+						_current = Kerbin
+						Kerbin
+						{
+							SUB_ORBITAL = 0.08000000000174623
+							ORBITING = 326.10000000711716
+							FLYING = 3.5200000000768341
+						}
+					}
 				}
 				profession
 				{
@@ -4778,19 +6816,17 @@ GAME
 			{
 				experience
 				{
-					_current = Pilot
+					_current = Passenger
 					Pilot
 					{
 						_current = Kerbin
 						Kerbin
 						{
-							_current = SPLASHED
-							_currentUT = 2027.04732421744
 							PRELAUNCH = 69.119999999960015
 							LANDED = 120.69999999988829
 							FLYING = 799.71580078053262
 							SUB_ORBITAL = 52.979999999951815
-							SPLASHED = 16.23999999998523
+							SPLASHED = 3593.6780371157856
 						}
 					}
 					EVA
@@ -4800,7 +6836,21 @@ GAME
 						{
 							FLYING = 76.599999999944998
 							LANDED = 787.19152343719395
-							SUB_ORBITAL = 21.499999999980446
+							SUB_ORBITAL = 34.320000000260279
+						}
+					}
+					Passenger
+					{
+						_current = Kerbin
+						Kerbin
+						{
+							_current = LANDED
+							_currentUT = 11005.619853609
+							PRELAUNCH = 933.84000002038283
+							FLYING = 840.12000001833803
+							SUB_ORBITAL = 1032.9116406341964
+							ORBITING = 2574.5228516024372
+							LANDED = 6.8800000001501758
 						}
 					}
 				}
@@ -4917,6 +6967,36 @@ GAME
 				profession
 				{
 					current = Scientist
+				}
+			}
+			KerbalExt
+			{
+				experience
+				{
+				}
+				profession
+				{
+					current = Scientist
+				}
+			}
+			KerbalExt
+			{
+				experience
+				{
+				}
+				profession
+				{
+					current = Engineer
+				}
+			}
+			KerbalExt
+			{
+				experience
+				{
+				}
+				profession
+				{
+					current = Pilot
 				}
 			}
 		}
@@ -5394,6 +7474,356 @@ GAME
 			code = M+
 			data = 
 		}
+		ENTRY
+		{
+			time = 6538.32536135362
+			name = Beauregard Kerman
+			code = L+
+			data = 
+		}
+		ENTRY
+		{
+			time = 6538.32536135362
+			name = Bob Kerman
+			code = L+
+			data = 
+		}
+		ENTRY
+		{
+			time = 6538.32536135362
+			name = Beauregard Kerman
+			code = B20
+			data = 
+		}
+		ENTRY
+		{
+			time = 6538.32536135362
+			name = Bob Kerman
+			code = B20
+			data = 
+		}
+		ENTRY
+		{
+			time = 7621.05700198891
+			name = Beauregard Kerman
+			code = E+
+			data = 
+		}
+		ENTRY
+		{
+			time = 7633.79700198918
+			name = Beauregard Kerman
+			code = B+
+			data = 
+		}
+		ENTRY
+		{
+			time = 7645.93700198945
+			name = Beauregard Kerman
+			code = S+
+			data = 0
+		}
+		ENTRY
+		{
+			time = 7645.93700198945
+			name = Bob Kerman
+			code = S+
+			data = 0
+		}
+		ENTRY
+		{
+			time = 7794.7570019927
+			name = Bob Kerman
+			code = C+
+			data = 
+		}
+		ENTRY
+		{
+			time = 7794.7570019927
+			name = Beauregard Kerman
+			code = C+
+			data = 
+		}
+		ENTRY
+		{
+			time = 7794.7570019927
+			name = Bob Kerman
+			code = O1:Kerbin
+			data = 
+		}
+		ENTRY
+		{
+			time = 7794.7570019927
+			name = Beauregard Kerman
+			code = O1:Kerbin
+			data = 
+		}
+		ENTRY
+		{
+			time = 7895.99700199491
+			name = Bob Kerman
+			code = S+
+			data = 40
+		}
+		ENTRY
+		{
+			time = 7895.99700199491
+			name = Bob Kerman
+			code = YR10
+			data = 
+		}
+		ENTRY
+		{
+			time = 7895.99700199491
+			name = Beauregard Kerman
+			code = S+
+			data = 40
+		}
+		ENTRY
+		{
+			time = 7899.75700199499
+			name = Bob Kerman
+			code = S+
+			data = 20
+		}
+		ENTRY
+		{
+			time = 7899.75700199499
+			name = Bob Kerman
+			code = YR50
+			data = 
+		}
+		ENTRY
+		{
+			time = 7899.75700199499
+			name = Beauregard Kerman
+			code = S+
+			data = 20
+		}
+		ENTRY
+		{
+			time = 7899.75700199499
+			name = Beauregard Kerman
+			code = YR400
+			data = 
+		}
+		ENTRY
+		{
+			time = 7904.07700199508
+			name = Bob Kerman
+			code = S+
+			data = 15
+		}
+		ENTRY
+		{
+			time = 7904.07700199508
+			name = Beauregard Kerman
+			code = S+
+			data = 15
+		}
+		ENTRY
+		{
+			time = 7908.43700199518
+			name = Bob Kerman
+			code = S+
+			data = 1.35000109672546
+		}
+		ENTRY
+		{
+			time = 7908.43700199518
+			name = Beauregard Kerman
+			code = S+
+			data = 1.35000109672546
+		}
+		ENTRY
+		{
+			time = 7912.79700199527
+			name = Bob Kerman
+			code = S+
+			data = 0
+		}
+		ENTRY
+		{
+			time = 7912.79700199527
+			name = Beauregard Kerman
+			code = S+
+			data = 0
+		}
+		ENTRY
+		{
+			time = 7922.15700199548
+			name = Bob Kerman
+			code = S+
+			data = 43.75
+		}
+		ENTRY
+		{
+			time = 7922.15700199548
+			name = Bob Kerman
+			code = YR100
+			data = 
+		}
+		ENTRY
+		{
+			time = 7922.15700199548
+			name = Beauregard Kerman
+			code = S+
+			data = 43.75
+		}
+		ENTRY
+		{
+			time = 8003.03700199724
+			name = Bob Kerman
+			code = E+
+			data = 
+		}
+		ENTRY
+		{
+			time = 8003.13700199725
+			name = Bob Kerman
+			code = E1:Kerbin
+			data = 
+		}
+		ENTRY
+		{
+			time = 8003.13700199725
+			name = Bob Kerman
+			code = V:Kerbin
+			data = 
+		}
+		ENTRY
+		{
+			time = 8329.13700200436
+			name = Bob Kerman
+			code = B+
+			data = 
+		}
+		ENTRY
+		{
+			time = 10601.5398536002
+			name = Bob Kerman
+			code = EX+
+			data = 
+		}
+		ENTRY
+		{
+			time = 10601.5398536002
+			name = Bob Kerman
+			code = DE
+			data = 
+		}
+		ENTRY
+		{
+			time = 10604.9798536003
+			name = Bob Kerman
+			code = B+
+			data = 
+		}
+		ENTRY
+		{
+			time = 10740.3798536032
+			name = Beauregard Kerman
+			code = M3
+			data = 
+		}
+		ENTRY
+		{
+			time = 10740.3798536032
+			name = Bob Kerman
+			code = M3
+			data = 
+		}
+		ENTRY
+		{
+			time = 10852.7598536057
+			name = Bob Kerman
+			code = H3
+			data = 
+		}
+		ENTRY
+		{
+			time = 10998.4198536089
+			name = Bob Kerman
+			code = L:Kerbin
+			data = 
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Beauregard Kerman
+			code = S+
+			data = 0
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Bob Kerman
+			code = S+
+			data = 0
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Beauregard Kerman
+			code = S+
+			data = 36
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Bob Kerman
+			code = S+
+			data = 36
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Bob Kerman
+			code = YR150
+			data = 
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Beauregard Kerman
+			code = S+
+			data = 50
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Bob Kerman
+			code = S+
+			data = 50
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Bob Kerman
+			code = YR200
+			data = 
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Beauregard Kerman
+			code = M+
+			data = 
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Bob Kerman
+			code = M+
+			data = 
+		}
+		ENTRY
+		{
+			time = 11005.879853609
+			name = Bob Kerman
+			code = QS
+			data = 
+		}
 	}
 	SCENARIO
 	{
@@ -5413,14 +7843,21 @@ GAME
 		isAtmSuitEnabled = True
 		Kerbals
 		{
-			Jebediah Kerman = M GENERIC GENERIC
+			Jebediah Kerman = M GENERIC Orange_Suit_Veteran
 			Bill Kerman = M GENERIC GENERIC
-			Bob Kerman = M GENERIC GENERIC
-			Valentina Kerman = F GENERIC GENERIC
-			Beauregard Kerman = M GENERIC GENERIC
+			Bob Kerman = M GENERIC Blue_Suit_Science
+			Valentina Kerman = F GENERIC Yellow_Suit_Command
+			Beauregard Kerman = M GENERIC Green_Suit_Captain_Informal
+			Sambur Kerman = M GENERIC GENERIC
+			Milinne Kerman = F GENERIC GENERIC
+			Rophie Kerman = F GENERIC GENERIC
 		}
 		ClassSuits
 		{
+			Pilot = Yellow_Suit_Command
+			Engineer = Red_Suit_EngineerSecurityComms
+			Scientist = Blue_Suit_Medical
+			Tourist = Low_Tier_Cadet
 		}
 	}
 	SCENARIO
@@ -5442,7 +7879,7 @@ GAME
 	{
 		name = AGextScenario
 		scene = 7
-		LastSave = 31
+		LastSave = 104
 	}
 	SCENARIO
 	{
@@ -5464,17 +7901,1389 @@ GAME
 	SCENARIO
 	{
 		name = KerbalAlarmClockScenario
-		scene = 5, 6, 7
+		scene = 5, 6, 7, 8
 		KACAlarmListStorage
 		{
 		}
 	}
+	SCENARIO
+	{
+		name = SentinelScenario
+		scene = 7, 8, 5
+		NextSpawnTime = 29080.8045508278
+	}
 	FLIGHTSTATE
 	{
 		version = 1.0.4
-		UT = 2264.58732421722
+		UT = 14015.2412159733
 		activeVessel = 0
 		mapViewFiltering = -1026
+		VESSEL
+		{
+			pid = 0ae54fcb340a46fbacf844d2b5712c7f
+			name = Ast. HSJ-227
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 5604.48536133324
+			lct = 5604.48536133324
+			root = 0
+			lat = -2.85880872041442
+			lon = 175.993670795462
+			alt = 14366837874.0551
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.2984336,0.402898,-0.8173988,0.283672
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14978619270.5322
+				ECC = 0.0934106117309981
+				INC = 2.89294794401778
+				LPE = 359.564141356112
+				LAN = 261.845758681552
+				MNA = 6.26280486815754
+				EPH = 2049190.22144532
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 559298752
+				mid = 559298752
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 5604.48536133324
+				lifetime = 586354.751586914
+				refTime = 1728000
+				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 5722e37b1c0649eb9575977f0e1a28b3
+			name = Ast. ZEF-778
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 5620.02536133358
+			lct = 5620.02536133358
+			root = 0
+			lat = 0.0588595504276617
+			lon = 185.845397410919
+			alt = 14073462122.2904
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.2576716,0.5807403,0.6127633,0.4699652
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 13965051368.9496
+				ECC = 0.0296833567068645
+				INC = 0.523646057530143
+				LPE = 212.494772241347
+				LAN = 184.075056979303
+				MNA = 5.75437958188405
+				EPH = 4721268.90231446
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1616700346
+				mid = 1616700346
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 5620.02536133358
+				lifetime = 1363090.97900391
+				refTime = 1728000
+				size = 1
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = b84ede707cc94db694f6de47a3cb2993
+			name = Ast. RKS-930
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 5635.04536133391
+			lct = 5635.04536133391
+			root = 0
+			lat = -0.341073240274669
+			lon = 209.527589348936
+			alt = 17698164054.3333
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.2011649,0.7296318,0.3740215,0.5359832
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15871576669.3875
+				ECC = 0.142429478510165
+				INC = 1.91131520199177
+				LPE = 350.706573016174
+				LAN = 23.9477331994707
+				MNA = 0.0266899715993734
+				EPH = 5029981.72504883
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1495080506
+				mid = 1495080506
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 5635.04536133391
+				lifetime = 749079.766845703
+				refTime = 1728000
+				size = 1
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 4a3ed736c07b4eca833bfe817b9b9f78
+			name = Ast. DOE-384
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 5650.06536133423
+			lct = 5650.06536133423
+			root = 0
+			lat = 0.0737862742530149
+			lon = 179.024387430203
+			alt = 13724789273.1394
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.6094507,0.5478745,0.4215595,0.3881894
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 13718305880.3697
+				ECC = 0.0195447759915309
+				INC = 0.0841229984013594
+				LPE = 242.241091240742
+				LAN = 122.435477219861
+				MNA = 5.16651188466373
+				EPH = 3035983.79338868
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1640643508
+				mid = 1640643508
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 5650.06536133423
+				lifetime = 1473940.61279297
+				refTime = 1728000
+				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = eedcc508927947a089cc8036b9489418
+			name = Ast. ITE-572
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 5665.08536133456
+			lct = 5665.08536133456
+			root = 0
+			lat = 0.635744550242325
+			lon = 206.791257222473
+			alt = 16468175683.1418
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.621262,-0.680547,0.1940954,0.3364764
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15099803432.7842
+				ECC = 0.107983354060212
+				INC = 1.57608224695776
+				LPE = 202.450098751717
+				LAN = 187.728464260161
+				MNA = 5.97593918278578
+				EPH = 4813298.53262696
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1340961998
+				mid = 1340961998
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 5665.08536133456
+				lifetime = 88340.1100158691
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = d188260b6e9943249a0f5332229a0c3b
+			name = Ast. HCV-007
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 5800.20536133751
+			lct = 5800.20536133751
+			root = 0
+			lat = -0.235538041330784
+			lon = 175.850140737191
+			alt = 14205275781.9397
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.5619867,-0.1033728,-0.7917899,0.2157632
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14081350586.9179
+				ECC = 0.0477881665746011
+				INC = 0.755525119397946
+				LPE = 325.333844117834
+				LAN = 342.519659098804
+				MNA = 0.674533542852919
+				EPH = 4351973.59403321
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 74620232
+				mid = 74620232
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 5800.20536133751
+				lifetime = 1464928.30810547
+				refTime = 1728000
+				size = 0
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 41a0378e71c944efb03181a71ea1d48a
+			name = Ast. DGW-845
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 6070.44536134341
+			lct = 6070.44536134341
+			root = 0
+			lat = -0.266152821118801
+			lon = 220.264652311132
+			alt = 18290337396.0691
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.1921526,-0.9199332,0.1587183,0.3026693
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 16051444263.1492
+				ECC = 0.158799518304875
+				INC = 0.599100716533248
+				LPE = 16.8326958614633
+				LAN = 18.9485768024338
+				MNA = 6.05024781702952
+				EPH = 5044408.87309572
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1205968268
+				mid = 1205968268
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 6070.44536134341
+				lifetime = 802810.079956055
+				refTime = 1728000
+				size = 1
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 647d0674463742c1a4e6ac235d485225
+			name = WhyUBringMeJunk Debris
+			type = Debris
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 604.760000013201
+			lct = 8437.63700200673
+			root = 0
+			lat = -0.0283487837914725
+			lon = -21.7285680128813
+			alt = 78581.2065215895
+			hgt = -1
+			nrm = -0.8949349,0.0006478173,-0.4461965
+			rot = 0.4279881,0.3136429,0.5629535,-0.6336702
+			CoM = -0.0001260924,-2.308059,-6.207501E-05
+			stg = 4
+			prst = False
+			ref = 0
+			ctrl = False
+			cPch = 0
+			cHdg = 0
+			cMod = -1
+			ORBIT
+			{
+				SMA = 678950.105411973
+				ECC = 0.0011983698362412
+				INC = 0.0812645431726283
+				LPE = 42.5032300488006
+				LAN = 239.395386866272
+				MNA = 3.6738615525197
+				EPH = 8591.8970020101
+				REF = 1
+			}
+			PART
+			{
+				name = Corvus.Decoupler
+				cid = 4289734276
+				uid = 174022270
+				mid = 2696439289
+				launchID = 18
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 3
+				dstg = 1
+				sqor = 3
+				sepI = 3
+				sidx = 1
+				attm = 0
+				srfN = , -1
+				attN = bottom, 1
+				attN = top, -1
+				mass = 0.05
+				temp = 304.238760524283
+				tempExt = 304.078754833741
+				expt = 0.5
+				state = 1
+				connected = False
+				attached = False
+				flag = Squad/Flags/NASA
+				rTrf = Corvus.Decoupler
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDecouple
+					isEnabled = True
+					ejectionForcePercent = 100
+					isDecoupled = True
+					ejectionForcePercent_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 1
+					}
+					EVENTS
+					{
+						Decouple
+						{
+							active = False
+							guiActive = True
+							guiIcon = Decouple
+							guiName = Decouple
+							category = Decouple
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DecoupleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAGX
+					isEnabled = True
+					placeHolder = Hello World
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = KJRDecouplerReinforcementModule
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = science.module
+				cid = 4289910594
+				uid = 3169870445
+				mid = 2696439289
+				launchID = 18
+				parent = 0
+				position = 0,-0.702500343322754,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 2
+				dstg = 2
+				sqor = -1
+				sepI = 3
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 0
+				attN = bottom, 2
+				mass = 0.2
+				temp = 304.257386364765
+				tempExt = 304.083248007402
+				expt = 0.5
+				state = 1
+				connected = False
+				attached = True
+				flag = Squad/Flags/NASA
+				rTrf = science.module
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					status = Locked
+					animSwitch = True
+					animTime = 1
+					animSpeed = 1
+					EVENTS
+					{
+						Toggle
+						{
+							active = False
+							guiActive = False
+							guiActiveEditor = True
+							guiIcon = Toggle
+							guiName = Close
+							category = Toggle
+							guiActiveUnfocused = True
+							unfocusedRange = 5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = True
+					Inoperable = False
+					EVENTS
+					{
+						DeployExperiment
+						{
+							active = False
+							guiActive = True
+							guiIcon = Deploy
+							guiName = Observe Materials Bay
+							category = Deploy
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						CollectDataExternalEvent
+						{
+							active = True
+							guiActive = False
+							guiIcon = 
+							guiName = Collect Data
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.2
+							externalToEVAOnly = True
+						}
+						ReviewDataEvent
+						{
+							active = True
+							guiActive = True
+							guiIcon = Review Data
+							guiName = Review Data
+							category = Review Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						ResetExperiment
+						{
+							active = True
+							guiActive = True
+							guiIcon = Reset
+							guiName = Reset Materials Bay
+							category = Reset
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						DeployExperimentExternal
+						{
+							active = False
+							guiActive = False
+							guiIcon = Deploy
+							guiName = Observe Materials Bay
+							category = Deploy
+							guiActiveUnfocused = True
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						ResetExperimentExternal
+						{
+							active = True
+							guiActive = False
+							guiIcon = Reset
+							guiName = Reset Materials Bay
+							category = Reset
+							guiActiveUnfocused = True
+							unfocusedRange = 1.2
+							externalToEVAOnly = True
+						}
+						CleanUpExperimentExternal
+						{
+							active = False
+							guiActive = False
+							guiIcon = Restore
+							guiName = Restore
+							category = Restore
+							guiActiveUnfocused = True
+							unfocusedRange = 1.2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+					ScienceData
+					{
+						data = 25
+						subjectID = mobileMaterialsLab@KerbinInSpaceLow
+						xmit = 0.35
+						labBoost = 1
+						title = Materials Study while in space near Kerbin
+					}
+				}
+				MODULE
+				{
+					name = ModuleAGX
+					isEnabled = True
+					placeHolder = Hello World
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = TweakScale
+					isEnabled = True
+					currentScale = 1.25
+					defaultScale = 1.25
+					defaultTransformScale = (1.25, 1.25, 1.25)
+					DryCost = 880
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = fuelTank
+				cid = 4287536434
+				uid = 685407903
+				mid = 2696439289
+				launchID = 18
+				parent = 1
+				position = 0,-2.18069076538086,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 3
+				dstg = 3
+				sqor = -1
+				sepI = 3
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 1
+				attN = bottom, 3
+				mass = 0.25
+				temp = 304.305532895223
+				tempExt = 304.091771608995
+				expt = 0.5
+				state = 1
+				connected = False
+				attached = True
+				flag = Squad/Flags/NASA
+				rTrf = fuelTank
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAGX
+					isEnabled = True
+					placeHolder = Hello World
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = GPOSpeedPump
+					isEnabled = True
+					PumpLevel = 0
+					AutoPump = False
+					AutoBalance = False
+					PumpLevel_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 16
+						stepIncrement = 1
+					}
+					AutoPump_UIFlight
+					{
+						controlEnabled = True
+					}
+					AutoBalance_UIFlight
+					{
+						controlEnabled = True
+					}
+					EVENTS
+					{
+						ConfigurePump
+						{
+							active = True
+							guiActive = True
+							guiActiveEditor = True
+							guiIcon = Pump Options
+							guiName = Pump Options
+							category = Pump Options
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = TweakScale
+					isEnabled = True
+					currentScale = 1.25
+					defaultScale = 1.25
+					defaultTransformScale = (1.25, 1.25, 1.25)
+					DryCost = 316.4
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 41.8920773609791
+					maxAmount = 180
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 51.2014197553646
+					maxAmount = 220
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = liquidEngine3
+				cid = 4289806482
+				uid = 2625556097
+				mid = 2696439289
+				launchID = 18
+				parent = 2
+				position = 0,-3.36381149291992,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 3
+				dstg = 3
+				sqor = 3
+				sepI = 3
+				sidx = 2
+				attm = 0
+				srfN = , -1
+				attN = top, 2
+				attN = bottom, -1
+				mass = 0.5
+				temp = 304.301317470406
+				tempExt = 304.222553370533
+				expt = 0.5
+				state = 1
+				connected = False
+				attached = True
+				flag = Squad/Flags/NASA
+				rTrf = liquidEngine3
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEngines
+					isEnabled = True
+					staged = True
+					flameout = False
+					EngineIgnited = True
+					engineShutdown = False
+					currentThrottle = 0
+					thrustPercentage = 100
+					manuallyOverridden = False
+					thrustPercentage_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 0.5
+					}
+					EVENTS
+					{
+						Activate
+						{
+							active = False
+							guiActive = True
+							guiIcon = Activate Engine
+							guiName = Activate Engine
+							category = Activate Engine
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						Shutdown
+						{
+							active = True
+							guiActive = True
+							guiIcon = Shutdown Engine
+							guiName = Shutdown Engine
+							category = Shutdown Engine
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						OnAction
+						{
+							actionGroup = None
+						}
+						ShutdownAction
+						{
+							actionGroup = None
+						}
+						ActivateAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleGimbal
+					isEnabled = True
+					gimbalLock = False
+					gimbalLimiter = 100
+					gimbalLock_UIFlight
+					{
+						controlEnabled = True
+					}
+					gimbalLimiter_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 1
+					}
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+						LockAction
+						{
+							actionGroup = None
+						}
+						FreeAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleJettison
+					isEnabled = True
+					isJettisoned = True
+					EVENTS
+					{
+						Jettison
+						{
+							active = False
+							guiActive = True
+							guiIcon = Jettison
+							guiName = Jettison
+							category = Jettison
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						JettisonAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSurfaceFX
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAGX
+					isEnabled = True
+					placeHolder = Hello World
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = MGFix
+					isEnabled = True
+					gimbalRateIsActive = False
+					gimbalResponseSpeed = 10
+					gimbalRateIsActive_UIFlight
+					{
+						controlEnabled = True
+					}
+					gimbalResponseSpeed_UIFlight
+					{
+						controlEnabled = True
+						minValue = 1
+						maxValue = 30
+						stepIncrement = 1
+					}
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = TweakScale
+					isEnabled = True
+					currentScale = 1.25
+					defaultScale = 1.25
+					defaultTransformScale = (1.25, 1.25, 1.25)
+					DryCost = 390
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 6710.56536135738
+				Gear = True, 0
+				Light = False, 0
+				RCS = True, 6534.50536135354
+				SAS = False, 6534.88536135355
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+		}
 	}
 	ROSTER
 	{
@@ -5531,14 +9340,21 @@ GAME
 			tour = False
 			state = Available
 			ToD = 0
-			idx = -1
+			idx = 1
 			CAREER_LOG
 			{
-				flight = 0
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Suborbit,Kerbin
+				0 = Orbit,Kerbin
+				0 = ExitVessel,Kerbin
+				0 = BoardVessel,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 0
+				flight = 1
 			}
 		}
 		KERBAL
@@ -5576,7 +9392,7 @@ GAME
 			idx = 0
 			CAREER_LOG
 			{
-				flight = 4
+				flight = 5
 				0 = ExitVessel,Kerbin
 				0 = Land,Kerbin
 				0 = Flight,Kerbin
@@ -5598,10 +9414,17 @@ GAME
 				3 = BoardVessel,Kerbin
 				3 = Land,Kerbin
 				3 = Recover
+				4 = Flight,Kerbin
+				4 = Suborbit,Kerbin
+				4 = ExitVessel,Kerbin
+				4 = BoardVessel,Kerbin
+				4 = Orbit,Kerbin
+				4 = Land,Kerbin
+				4 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 4
+				flight = 5
 			}
 		}
 		KERBAL
@@ -5835,6 +9658,69 @@ GAME
 				flight = 0
 			}
 		}
+		KERBAL
+		{
+			name = Sambur Kerman
+			gender = Male
+			type = Unowned
+			brave = 0.3139116
+			dumb = 0.9154393
+			badS = False
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Milinne Kerman
+			gender = Female
+			type = Unowned
+			brave = 0.8731539
+			dumb = 0.7190255
+			badS = False
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Rophie Kerman
+			gender = Female
+			type = Unowned
+			brave = 0.04813827
+			dumb = 0.6646003
+			badS = False
+			tour = False
+			state = Assigned
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
 	}
 	MESSAGESYSTEM
 	{
@@ -5842,7 +9728,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Test MRS Liquid Fuel Engine, 0.625m "Sparkler" at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£24,577   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
+			message = <b>Test MRS Jet Engine, 0.625m Basic in flight over Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£167,248   </>~n<#6DCFF6>©19   </>~n<#E0D503>¡6   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5850,7 +9736,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Test Mk-55 "Thud" Liquid Fuel Engine landed at Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£24,568   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
+			message = <b>Test J-33 "Wheesley" Basic Jet Engine in flight over Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£140,625   </>~n<#6DCFF6>©19   </>~n<#E0D503>¡8   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5858,7 +9744,15 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Test TR-18A Stack Decoupler landed at Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£23,625   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
+			message = <b>Orbit Kerbin!</>~n~nWe didn't tell the recovery team that you'd be staying in space, so they're still looking! Great job!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£68,504   </>~n<#6DCFF6>©12   </>~n<#E0D503>¡30   </>~n~n
+			color = 2
+			icon = 3
+			read = False
+		}
+		MESSAGE
+		{
+			title = Contract Complete
+			message = <b>Test TT-38K Radial Decoupler at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£23,625   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5874,7 +9768,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Test RT-10 "Hammer" Solid Fuel Booster at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£22,500   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
+			message = <b>Test RE-L10 "Poodle" Liquid Fuel Engine at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£24,568   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5882,7 +9776,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Test SpaceY 10R Radial SRB landed at Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£22,500   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
+			message = <b>Test LV-909 "Terrier" Liquid Fuel Engine on a sub-orbital trajectory over Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£213,362   </>~n<#6DCFF6>©31   </>~n<#E0D503>¡14   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5890,7 +9784,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set distance record of 100km.</>~n~nDistance record broken! Great work!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£372,047   </>~n<#E0D503>¡27   </>~n~n
+			message = <b>Test Mk16-XL Parachute in flight over Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£112,500   </>~n<#6DCFF6>©15   </>~n<#E0D503>¡6   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5898,7 +9792,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set altitude record of 70km.</>~n~nAltitude record reached! Well done!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£372,047   </>~n<#E0D503>¡27   </>~n~n
+			message = <b>Test TR-2V Stack Decoupler in flight over Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£118,125   </>~n<#6DCFF6>©15   </>~n<#E0D503>¡6   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5906,7 +9800,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Escape the atmosphere!</>~n~nWhat is it like up there? We hope it's fun because you're coming back very soon!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£49,153   </>~n<#6DCFF6>©8   </>~n<#E0D503>¡19   </>~n~n
+			message = <b>Test BACC "Thumper" Solid Fuel Booster in flight over Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£122,839   </>~n<#6DCFF6>©15   </>~n<#E0D503>¡6   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5914,7 +9808,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set distance record of 43km.</>~n~nDistance record broken! Great work!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£143,485   </>~n<#E0D503>¡9   </>~n~n
+			message = <b>Test Corvus Decoupler in flight over Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£118,125   </>~n<#6DCFF6>©15   </>~n<#E0D503>¡6   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5922,7 +9816,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set distance record of 32km.</>~n~nDistance record broken! Great work!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£106,780   </>~n<#E0D503>¡7   </>~n~n
+			message = <b>Test TT18-A Launch Stability Enhancer at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£23,625   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5930,7 +9824,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set distance record of 17km.</>~n~nDistance record broken! Great work!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£49,128   </>~n<#E0D503>¡2   </>~n~n
+			message = <b>Test MRS LAS Pod Shroud landed at Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£24,577   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5938,7 +9832,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set distance record of 11km.</>~n~nDistance record broken! Great work!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£31,789   </>~n<#E0D503>¡2   </>~n~n
+			message = <b>Test SpaceY K1 "Kiwi" Engine at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£27,039   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5946,7 +9840,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set altitude record of 26.5km.</>~n~nAltitude record reached! Well done!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£126,324   </>~n<#E0D503>¡8   </>~n~n
+			message = <b>Test TT-38K Radial Decoupler landed at Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£23,625   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5954,7 +9848,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set speed record of 1,050m/s.</>~n~nSpeed record shattered! Good job!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£140,148   </>~n<#E0D503>¡8   </>~n~n
+			message = <b>Test RE-L10 "Poodle" Liquid Fuel Engine landed at Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£24,568   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5962,7 +9856,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set altitude record of 19km.</>~n~nAltitude record reached! Well done!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£90,572   </>~n<#E0D503>¡6   </>~n~n
+			message = <b>Test Hydraulic Detachment Manifold at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£23,625   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5970,7 +9864,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set speed record of 750m/s.</>~n~nSpeed record shattered! Good job!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£99,629   </>~n<#E0D503>¡6   </>~n~n
+			message = <b>Test SpaceY 09S SRB (0.625m x 9m) landed at Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£27,039   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5978,7 +9872,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set speed record of 450m/s.</>~n~nSpeed record shattered! Good job!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£52,018   </>~n<#E0D503>¡3   </>~n~n
+			message = <b>Test MRS LAS Launch Abort System in flight over Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£122,885   </>~n<#6DCFF6>©15   </>~n<#E0D503>¡5   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5986,7 +9880,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set distance record of 5,000m.</>~n~nDistance record broken! Great work!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£2,890   </>~n<#E0D503>¡1   </>~n~n
+			message = <b>Test MRS Decoupler, Radial Mini in flight over Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£122,885   </>~n<#6DCFF6>©15   </>~n<#E0D503>¡5   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -5994,7 +9888,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set altitude record of 11.5km.</>~n~nAltitude record reached! Well done!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£47,477   </>~n<#E0D503>¡2   </>~n~n
+			message = <b>Test TR-2C Stack Separator at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£23,625   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -6002,7 +9896,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set altitude record of 7,500m.</>~n~nAltitude record reached! Well done!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£30,963   </>~n<#E0D503>¡2   </>~n~n
+			message = <b>Test MRS Decoupler, 2.5m Stack, Low Profile at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£24,577   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False
@@ -6010,23 +9904,7 @@ GAME
 		MESSAGE
 		{
 			title = Contract Complete
-			message = <b>Set speed record of 300m/s.</>~n~nSpeed record shattered! Good job!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£34,679   </>~n<#E0D503>¡2   </>~n~n
-			color = 2
-			icon = 3
-			read = False
-		}
-		MESSAGE
-		{
-			title = Contract Complete
-			message = <b>Set altitude record of 3,500m.</>~n~nAltitude record reached! Well done!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£2,890   </>~n<#E0D503>¡1   </>~n~n
-			color = 2
-			icon = 3
-			read = False
-		}
-		MESSAGE
-		{
-			title = Contract Complete
-			message = <b>Set speed record of 150m/s.</>~n~nSpeed record shattered! Good job!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£3,468   </>~n<#E0D503>¡1   </>~n~n
+			message = <b>Test Launch Escape System at the Launch Site.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> ~n<#B4D455>£22,500   </>~n<#6DCFF6>©5   </>~n<#E0D503>¡1   </>~n~n
 			color = 2
 			icon = 3
 			read = False

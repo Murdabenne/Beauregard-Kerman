@@ -1,15 +1,15 @@
-ship = tardcart
+ship = Kerbodyne Hiflyer
 version = 1.0.4
 description = 
 type = SPH
-size = 3.548929,3.173965,6.827011
+size = 9.02767,3.555773,9.059645
 PART
 {
-	part = Mark1Cockpit_4293659058
+	part = Mark1Cockpit_4294624068
 	partName = Part
-	pos = 0.7102917,10.38599,0.9191634
+	pos = 0.0399035,3.593048,-0.231393
 	attPos = 0,0,0
-	attPos0 = 0.7102917,10.38599,0.9191634
+	attPos0 = 0.0399035,3.593048,-0.231393
 	rot = 0.7071068,0,0,0.7071068
 	attRot = 0,0,0,1
 	attRot0 = 0.7071068,0,0,0.7071068
@@ -24,10 +24,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = science.module_4293444234
-	link = GooExperiment_4293442306
-	link = mumech.MJ2.AR202_4293383900
-	attN = bottom,science.module_4293444234
+	link = MK1Fuselage_4294379328
+	attN = bottom,MK1Fuselage_4294379328
 	EVENTS
 	{
 	}
@@ -288,9 +286,28 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
 		name = PilotRSASFix
 		isEnabled = True
-		minResponseLimit = 0.3
+		minResponseLimit = 0.5
+		versionNumber = 0.02
 		minClamp = 0.2
 		threshold = 0.3
 		minResponseLimit_UIFlight
@@ -431,63 +448,12 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleDockingAutopilot
-			{
-				forceRol = False
-				overrideSafeDistance = False
-				overrideTargetSize = False
-				unlockParts = 
-				unlockTechs = 
-				rol
-				{
-					_val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleAttitudeAdjustment
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
 			MechJebModuleRoverWindow
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleStageStats
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentGuidance
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleLandingAutopilot
-			{
-				deployGears = True
-				deployChutes = True
-				rcsAdjustment = True
-				unlockParts = 
-				unlockTechs = 
-				touchdownSpeed
-				{
-					_val = 0.5
-					_text = 0.5
-				}
-				limitGearsStage
-				{
-					val = 0
-					_text = 0
-				}
-				limitChutesStage
-				{
-					val = 0
-					_text = 0
-				}
-			}
-			MechJebModuleSpaceplaneAutopilot
+			MechJebModuleAttitudeAdjustment
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -497,28 +463,31 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleNodeEditor
+			MechJebModuleRoverController
 			{
+				ControlHeading = False
+				ControlSpeed = False
+				BrakeOnEject = False
+				BrakeOnEnergyDepletion = False
+				WarpToDaylight = True
+				StabilityControl = False
+				LimitAcceleration = False
 				unlockParts = 
 				unlockTechs = 
+				heading
+				{
+					_val = 0
+					_text = 0
+				}
+				speed
+				{
+					_val = 10
+					_text = 10
+				}
 			}
-			MechJebModuleAscentPathEditor
+			MechJebModuleSpaceplaneGuidance
 			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleAscentAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleLandingPredictions
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRendezvousGuidance
-			{
+				runwayIndex = 0
 				unlockParts = 
 				unlockTechs = 
 			}
@@ -532,20 +501,30 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleDebugArrows
+			MechJebModuleSpaceplaneAutopilot
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleWarpHelper
+			MechJebModuleDockingGuidance
 			{
 				unlockParts = 
 				unlockTechs = 
-				phaseAngle
-				{
-					_val = 0
-					_text = 0
-				}
+			}
+			MechJebModuleSettings
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentPathEditor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleDebugArrows
+			{
+				unlockParts = 
+				unlockTechs = 
 			}
 			MechJebModuleSmartASS
 			{
@@ -594,28 +573,95 @@ PART
 					_text = 0
 				}
 			}
-			MechJebModuleLandingGuidance
+			MechJebModuleDockingAutopilot
 			{
-				landingSiteIdx = 0
+				forceRol = False
+				overrideSafeDistance = False
+				overrideTargetSize = False
 				unlockParts = 
 				unlockTechs = 
-			}
-			MechJebModuleRendezvousAutopilot
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleTargetController
-			{
-				unlockParts = 
-				unlockTechs = 
+				rol
+				{
+					_val = 0
+					_text = 0
+				}
 			}
 			ModExtensionDemo
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleDockingGuidance
+			MechJebModuleThrustWindow
+			{
+				autostageSavedState = False
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleWarpHelper
+			{
+				unlockParts = 
+				unlockTechs = 
+				phaseAngle
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleCustomWindowEditor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRendezvousAutopilotWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleNodeExecutor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleNodeEditor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleLandingAutopilot
+			{
+				deployGears = True
+				deployChutes = True
+				rcsAdjustment = True
+				unlockParts = 
+				unlockTechs = 
+				touchdownSpeed
+				{
+					_val = 0.5
+					_text = 0.5
+				}
+				limitGearsStage
+				{
+					val = 0
+					_text = 0
+				}
+				limitChutesStage
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleLandingGuidance
+			{
+				landingSiteIdx = 0
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleLandingPredictions
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -626,61 +672,12 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleThrustWindow
-			{
-				autostageSavedState = False
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRendezvousAutopilotWindow
+			MechJebModuleAscentGuidance
 			{
 				unlockParts = 
 				unlockTechs = 
 			}
-			MechJebModuleManeuverPlanner
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleRoverController
-			{
-				ControlHeading = False
-				ControlSpeed = False
-				BrakeOnEject = False
-				BrakeOnEnergyDepletion = False
-				WarpToDaylight = True
-				StabilityControl = False
-				LimitAcceleration = False
-				unlockParts = 
-				unlockTechs = 
-				heading
-				{
-					_val = 0
-					_text = 0
-				}
-				speed
-				{
-					_val = 10
-					_text = 10
-				}
-			}
-			MechJebModuleCustomWindowEditor
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSettings
-			{
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleSpaceplaneGuidance
-			{
-				runwayIndex = 0
-				unlockParts = 
-				unlockTechs = 
-			}
-			MechJebModuleNodeExecutor
+			MechJebModuleRendezvousAutopilot
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -691,6 +688,26 @@ PART
 				unlockTechs = 
 			}
 			MechJebModuleWaypointHelpWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleTargetController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleManeuverPlanner
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleStageStats
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRendezvousGuidance
 			{
 				unlockParts = 
 				unlockTechs = 
@@ -712,6 +729,12 @@ PART
 				unlockParts = 
 				unlockTechs = 
 			}
+			MechJebModuleSolarPanelController
+			{
+				prev_ShouldOpenSolarPanels = False
+				unlockParts = 
+				unlockTechs = 
+			}
 			MechJebModuleThrustController
 			{
 				limitThrottle = False
@@ -722,12 +745,6 @@ PART
 					_val = 1
 					_text = 100
 				}
-			}
-			MechJebModuleSolarPanelController
-			{
-				prev_ShouldOpenSolarPanels = False
-				unlockParts = 
-				unlockTechs = 
 			}
 			MechJebModuleRCSController
 			{
@@ -814,6 +831,26 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
+		amount = 300
+		maxAmount = 300
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 0
+		maxAmount = 7.5
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
 		amount = 50
 		maxAmount = 50
 		flowState = True
@@ -823,9 +860,59 @@ PART
 	}
 	RESOURCE
 	{
-		name = MonoPropellant
-		amount = 7.5
-		maxAmount = 7.5
+		name = Food
+		amount = 1.097
+		maxAmount = 1.097
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Water
+		amount = 0.725
+		maxAmount = 0.725
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxygen
+		amount = 111.038
+		maxAmount = 111.038
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = CarbonDioxide
+		amount = 0
+		maxAmount = 95.913
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Waste
+		amount = 0
+		maxAmount = 0.1
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = WasteWater
+		amount = 0
+		maxAmount = 0.924
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -834,14 +921,14 @@ PART
 }
 PART
 {
-	part = science.module_4293444234
+	part = MK1Fuselage_4294379328
 	partName = Part
-	pos = 0.7102917,10.38599,0.1316611
+	pos = 0.0399035,3.593048,-1.343893
 	attPos = 0,0,0
-	attPos0 = 0,-0.7875,9.38773E-08
-	rot = 0,-0.7071068,-0.7071068,0
-	attRot = 0,-0.9999999,0,0
-	attRot0 = 0,-1,0,0
+	attPos0 = 0,-1.1125,1.326203E-07
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 0
@@ -853,12 +940,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = fuelTankSmall_4293644224
-	link = sensorThermometer_4293436782
-	link = batteryPack_4293409616
-	link = batteryPack_4293408460
-	attN = top,Mark1Cockpit_4293659058
-	attN = bottom,fuelTankSmall_4293644224
+	link = GearFree_4294575016
+	link = fuelTank.long_4294621328
+	attN = top,Mark1Cockpit_4294624068
+	attN = bottom,fuelTank.long_4294621328
 	EVENTS
 	{
 	}
@@ -870,26 +955,528 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateGeneric
+		name = ModuleAGX
 		isEnabled = True
-		status = Locked
-		animSwitch = True
-		animTime = 0
-		animSpeed = -1
+		placeHolder = Hello World
 		EVENTS
 		{
-			Toggle
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = GPOSpeedPump
+		isEnabled = True
+		PumpLevel = 0
+		AutoPump = False
+		AutoBalance = False
+		PumpLevel_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 16
+			stepIncrement = 1
+		}
+		AutoPump_UIFlight
+		{
+			controlEnabled = True
+		}
+		AutoBalance_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			ConfigurePump
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Pump Options
+				guiName = Pump Options
+				category = Pump Options
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 230
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 150
+		maxAmount = 150
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = GearFree_4294575016
+	partName = Part
+	pos = 0.0399035,2.973569,-0.6322193
+	attPos = 0,0,0
+	attPos0 = 0,0.7116743,0.6194782
+	rot = 4.118994E-07,1,8.42937E-08,-2.009718E-14
+	attRot = 0,0.9999999,0,0
+	attRot0 = 2.912566E-07,0.7071069,-0.7071068,2.912565E-07
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,MK1Fuselage_4294379328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingGearFixed
+		isEnabled = True
+		BrakeTorque = 20
+		brakesEngaged = False
+		brakesEnabled = False
+		BrakeTorque_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 30
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			EnableBrakes
 			{
 				active = True
 				guiActive = False
 				guiActiveEditor = True
-				guiIcon = Toggle
-				guiName = Deploy
-				category = Toggle
-				guiActiveUnfocused = True
-				unfocusedRange = 5
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
+			DisableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			BrakesAction
+			{
+				actionGroup = Brakes
+				active = False
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSteering
+		isEnabled = True
+		steeringLocked = False
+		invertSteering = False
+		EVENTS
+		{
+			UnLockSteering
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Unlock Steering
+				guiName = Unlock Steering
+				category = Unlock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LockSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Steering
+				guiName = Lock Steering
+				category = Lock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			InvertSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Invert Steering
+				guiName = Invert Steering
+				category = Invert Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			InvertSteeringAction
+			{
+				actionGroup = None
+			}
+			LockSteeringAction
+			{
+				actionGroup = None
+			}
+			UnlockSteeringAction
+			{
+				actionGroup = None
+			}
+			ToggleSteeringAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 150
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = fuelTank.long_4294621328
+	partName = Part
+	pos = 0.0399035,3.593048,-4.156394
+	attPos = 0,0,0
+	attPos0 = 0,-2.812501,3.352762E-07
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = JetEngine_4294617550
+	link = sweptWing_4294608126
+	link = sweptWing_4294608016
+	link = winglet3_4294604856
+	link = R8winglet_4294604302
+	link = R8winglet_4294604240
+	link = GearFixed_4294584980
+	link = GearFixed_4294580780
+	link = radialLiquidEngine1-2_4294615258
+	link = radialLiquidEngine1-2_4294580558
+	link = airScoop_4294446526
+	link = NBjetBasic0m_4285004968
+	attN = top,MK1Fuselage_4294379328
+	attN = bottom,JetEngine_4294617550
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = GPOSpeedPump
+		isEnabled = True
+		PumpLevel = 0
+		AutoPump = False
+		AutoBalance = False
+		PumpLevel_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 16
+			stepIncrement = 1
+		}
+		AutoPump_UIFlight
+		{
+			controlEnabled = True
+		}
+		AutoBalance_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			ConfigurePump
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Pump Options
+				guiName = Pump Options
+				category = Pump Options
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 432.8
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 360
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 440
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = JetEngine_4294617550
+	partName = Part
+	pos = 0.0399035,3.593048,-7.016781
+	attPos = 0,0,0
+	attPos0 = 0,-2.860376,3.409833E-07
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 1
+	dstg = 0
+	sidx = 0
+	sqor = 1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = top,fuelTank.long_4294621328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		gimbalLock_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
 		}
 		ACTIONS
 		{
@@ -897,101 +1484,11 @@ PART
 			{
 				actionGroup = None
 			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CleanUpExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Restore
-				guiName = Restore
-				category = Restore
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
+			LockAction
 			{
 				actionGroup = None
 			}
-			ResetAction
+			FreeAction
 			{
 				actionGroup = None
 			}
@@ -999,12 +1496,8 @@ PART
 	}
 	MODULE
 	{
-		name = TweakScale
+		name = ModuleAlternator
 		isEnabled = True
-		currentScale = 1.25
-		defaultScale = 1.25
-		defaultTransformScale = (1.25, 1.25, 1.25)
-		DryCost = 880
 		EVENTS
 		{
 		}
@@ -1012,73 +1505,19 @@ PART
 		{
 		}
 	}
-}
-PART
-{
-	part = fuelTankSmall_4293644224
-	partName = Part
-	pos = 0.7102917,10.38599,-0.9360912
-	attPos = 0,0,0
-	attPos0 = 0,-1.06775,-1.272857E-07
-	rot = 0.7071068,0,0,0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 0,1,0,0
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 0
-	modCost = 91.8
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = fuelTankSmall_4293643522
-	link = airScoop_4293026948
-	attN = top,science.module_4293444234
-	attN = bottom,fuelTankSmall_4293643522
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
 	MODULE
 	{
-		name = GPOSpeedPump
+		name = ModuleTestSubject
 		isEnabled = True
-		PumpLevel = 0
-		AutoPump = False
-		AutoBalance = False
-		PumpLevel_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 16
-			stepIncrement = 1
-		}
-		AutoPump_UIFlight
-		{
-			controlEnabled = True
-		}
-		AutoBalance_UIFlight
-		{
-			controlEnabled = True
-		}
 		EVENTS
 		{
-			ConfigurePump
+			RunTestEvent
 			{
-				active = True
+				active = False
 				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Pump Options
-				guiName = Pump Options
-				category = Pump Options
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1090,530 +1529,65 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleFuelTanks
+		name = ModuleSurfaceFX
 		isEnabled = True
-		type = Default
-		utilization = 86
-		mass = 0.125
-		volume = 200
-		type_UIEditor
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = MGFix
+		isEnabled = True
+		gimbalRateIsActive = False
+		gimbalResponseSpeed = 10
+		gimbalRateIsActive_UIFlight
 		{
 			controlEnabled = True
 		}
-		utilization_UIEditor
+		gimbalResponseSpeed_UIFlight
 		{
 			controlEnabled = True
 			minValue = 1
-			maxValue = 100
-			incrementSlide = 1
-		}
-		EVENTS
-		{
-			HideUI
-			{
-				active = False
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Hide UI
-				guiName = Hide UI
-				category = Hide UI
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ShowUI
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Show UI
-				guiName = Show UI
-				category = Show UI
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Empty
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Remove All Tanks
-				guiName = Remove All Tanks
-				category = Remove All Tanks
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			MFT0
-			{
-				active = True
-				guiActive = False
-				guiIcon = 100% LiquidFuel
-				guiName = 100% LiquidFuel
-				category = 100% LiquidFuel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-		TANK
-		{
-			name = LiquidFuel
-			note = 
-			utilization = 1
-			mass = 0
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 90
-			maxAmount = 90
-		}
-		TANK
-		{
-			name = Oxidizer
-			note = 
-			utilization = 1
-			mass = 0
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 110
-			maxAmount = 110
-		}
-		TANK
-		{
-			name = MonoPropellant
-			note = 
-			utilization = 1
-			mass = 0.000625
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 0
-			maxAmount = 0
-		}
-		TANK
-		{
-			name = XenonGas
-			note = (pressurized)
-			utilization = 56
-			mass = 0.000625
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 0
-			maxAmount = 0
-		}
-		TANK
-		{
-			name = Karbonite
-			note = 
-			utilization = 1
-			mass = 0
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 0
-			maxAmount = 0
-		}
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 1.25
-		defaultScale = 1.25
-		defaultTransformScale = (1.25, 1.25, 1.25)
-		DryCost = 183.2
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 90
-		maxAmount = 90
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 110
-		maxAmount = 110
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = fuelTankSmall_4293643522
-	partName = Part
-	pos = 0.7102917,10.38599,-2.046588
-	attPos = 0,0,0
-	attPos0 = 0,-1.1105,1.32382E-07
-	rot = 0.7071068,0,0,0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 0
-	modCost = 91.8
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = GearFixed_4293607532
-	link = GearFixed_4293607098
-	link = wingConnector2_4293597778
-	link = wingConnector2_4293597490
-	link = R8winglet_4293590372
-	link = NBjetBasic0m_4294075838
-	attN = top,fuelTankSmall_4293644224
-	attN = bottom,NBjetBasic0m_4294075838
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = GPOSpeedPump
-		isEnabled = True
-		PumpLevel = 0
-		AutoPump = False
-		AutoBalance = False
-		PumpLevel_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 16
-			stepIncrement = 1
-		}
-		AutoPump_UIFlight
-		{
-			controlEnabled = True
-		}
-		AutoBalance_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-			ConfigurePump
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Pump Options
-				guiName = Pump Options
-				category = Pump Options
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleFuelTanks
-		isEnabled = True
-		type = Default
-		utilization = 86
-		mass = 0.125
-		volume = 200
-		type_UIEditor
-		{
-			controlEnabled = True
-		}
-		utilization_UIEditor
-		{
-			controlEnabled = True
-			minValue = 1
-			maxValue = 100
-			incrementSlide = 1
-		}
-		EVENTS
-		{
-			HideUI
-			{
-				active = False
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Hide UI
-				guiName = Hide UI
-				category = Hide UI
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ShowUI
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Show UI
-				guiName = Show UI
-				category = Show UI
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Empty
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Remove All Tanks
-				guiName = Remove All Tanks
-				category = Remove All Tanks
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			MFT0
-			{
-				active = True
-				guiActive = False
-				guiIcon = 100% LiquidFuel
-				guiName = 100% LiquidFuel
-				category = 100% LiquidFuel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-		TANK
-		{
-			name = LiquidFuel
-			note = 
-			utilization = 1
-			mass = 0
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 90
-			maxAmount = 90
-		}
-		TANK
-		{
-			name = Oxidizer
-			note = 
-			utilization = 1
-			mass = 0
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 110
-			maxAmount = 110
-		}
-		TANK
-		{
-			name = MonoPropellant
-			note = 
-			utilization = 1
-			mass = 0.000625
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 0
-			maxAmount = 0
-		}
-		TANK
-		{
-			name = XenonGas
-			note = (pressurized)
-			utilization = 56
-			mass = 0.000625
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 0
-			maxAmount = 0
-		}
-		TANK
-		{
-			name = Karbonite
-			note = 
-			utilization = 1
-			mass = 0
-			cost = 0
-			loss_rate = 0
-			temperature = 300
-			fillable = True
-			techRequired = 
-			amount = 0
-			maxAmount = 0
-		}
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 1.25
-		defaultScale = 1.25
-		defaultTransformScale = (1.25, 1.25, 1.25)
-		DryCost = 183.2
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 90
-		maxAmount = 90
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 110
-		maxAmount = 110
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = GearFixed_4293607532
-	partName = Part
-	pos = 0.09533834,10.38599,-2.237906
-	attPos = 0,0,0
-	attPos0 = -0.6149534,-0.1913099,2.280589E-08
-	rot = -0.005555376,3.311237E-10,5.960374E-08,-0.9999847
-	attRot = 0,0,0,1
-	attRot0 = 0.7031677,4.238034E-08,4.191206E-08,-0.7110242
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = GearFixed_4293607098
-	srfN = srfAttach,fuelTankSmall_4293643522
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLandingGearFixed
-		isEnabled = True
-		BrakeTorque = 20
-		brakesEngaged = False
-		brakesEnabled = True
-		BrakeTorque_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
 			maxValue = 30
 			stepIncrement = 1
 		}
 		EVENTS
 		{
-			EnableBrakes
-			{
-				active = False
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Enable brakes
-				guiName = Enable brakes
-				category = Enable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableBrakes
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Disable brakes
-				guiName = Disable brakes
-				category = Disable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
 		}
 		ACTIONS
 		{
-			BrakesAction
-			{
-				actionGroup = Brakes
-			}
 		}
 	}
 	MODULE
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 100
-		defaultScale = 100
-		defaultTransformScale = (1, 1, 1)
-		DryCost = 100
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 950
 		EVENTS
 		{
 		}
@@ -1621,21 +1595,31 @@ PART
 		{
 		}
 	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
 }
 PART
 {
-	part = GearFixed_4293607098
+	part = sweptWing_4294608126
 	partName = Part
-	pos = 1.325245,10.38599,-2.237906
-	attPos = 0,0,0
-	attPos0 = 0.6149534,-0.1913099,2.280589E-08
-	rot = -5.984655E-08,0.9999847,0.005555376,-4.404184E-08
+	pos = -0.5793058,3.593048,-3.503041
+	attPos = 0,-0.4524873,5.394075E-08
+	attPos0 = -0.6192093,1.105842,-1.318267E-07
+	rot = 4.214685E-08,-0.7071068,-0.7071069,2.107343E-08
 	attRot = 0,0,0,1
-	attRot0 = -1.117562E-08,0.7110242,-0.7031677,-7.346019E-08
+	attRot0 = 1.490116E-08,-1,-8.42937E-08,4.470348E-08
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 1
-	dstg = 1
+	istg = 0
+	dstg = 0
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1643,106 +1627,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = GearFixed_4293607532
-	srfN = srfAttach,fuelTankSmall_4293643522
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLandingGearFixed
-		isEnabled = True
-		BrakeTorque = 20
-		brakesEngaged = False
-		brakesEnabled = True
-		BrakeTorque_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 30
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-			EnableBrakes
-			{
-				active = False
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Enable brakes
-				guiName = Enable brakes
-				category = Enable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableBrakes
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Disable brakes
-				guiName = Disable brakes
-				category = Disable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			BrakesAction
-			{
-				actionGroup = Brakes
-			}
-		}
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 100
-		defaultScale = 100
-		defaultTransformScale = (1, 1, 1)
-		DryCost = 100
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = wingConnector2_4293597778
-	partName = Part
-	pos = 0.09273487,10.38599,-1.825072
-	attPos = 0,0,0
-	attPos0 = -0.6175569,0.2215165,-2.640684E-08
-	rot = 0.5000001,0.5000001,-0.5000001,0.4999999
-	attRot = 0,0,0.7071067,-0.7071067
-	attRot0 = 1.264405E-07,4.214685E-08,-0.7071068,0.7071068
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = GearFree_4293034294
-	sym = wingConnector2_4293597490
-	srfN = srfAttach,fuelTankSmall_4293643522
+	link = StandardCtrlSrf_4294600104
+	sym = sweptWing_4294608016
+	srfN = srfAttach,fuelTank.long_4294621328
 	EVENTS
 	{
 	}
@@ -1765,61 +1652,19 @@ PART
 	}
 	MODULE
 	{
-		name = TweakScale
+		name = ModuleAGX
 		isEnabled = True
-		currentScale = 100
-		defaultScale = 100
-		defaultTransformScale = (1, 1, 1)
-		DryCost = 500
+		placeHolder = Hello World
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
 		}
-	}
-}
-PART
-{
-	part = wingConnector2_4293597490
-	partName = Part
-	pos = 1.327849,10.38599,-1.825072
-	attPos = 0,0,0
-	attPos0 = 0.6175569,0.2215165,-2.640684E-08
-	rot = -0.5000001,0.4999999,0.5000002,0.5000001
-	attRot = 0,0,0.7071067,-0.7071067
-	attRot0 = -0.7071068,0.7071068,2.318077E-07,-2.107343E-08
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = GearFree_4293618880
-	sym = wingConnector2_4293597778
-	srfN = srfAttach,fuelTankSmall_4293643522
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		EVENTS
+		TOGGLE
 		{
 		}
-		ACTIONS
+		HOLD
 		{
 		}
 	}
@@ -1830,7 +1675,7 @@ PART
 		currentScale = 100
 		defaultScale = 100
 		defaultTransformScale = (1, 1, 1)
-		DryCost = 500
+		DryCost = 620
 		EVENTS
 		{
 		}
@@ -1841,18 +1686,18 @@ PART
 }
 PART
 {
-	part = R8winglet_4293590372
+	part = StandardCtrlSrf_4294600104
 	partName = Part
-	pos = 0.7102917,11.54325,-2.745406
+	pos = -3.573713,3.593049,-5.622588
 	attPos = 0,0,0
-	attPos0 = -5.960464E-08,-0.698812,-1.157264
-	rot = -0.5000001,0.5,0.5,-0.5000001
-	attRot = 0,0,0,1
-	attRot0 = 0,0.7071068,0,-0.7071069
+	attPos0 = 2.994406,-2.119543,6.113978E-07
+	rot = -0.6874077,0.1657434,-0.1657425,-0.6874077
+	attRot = 0,0,-0.7071067,-0.7071067
+	attRot0 = -0.2343959,-0.9721413,-5.027685E-08,-6.348293E-07
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 1
-	dstg = 1
+	istg = 0
+	dstg = 0
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1860,7 +1705,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,fuelTankSmall_4293643522
+	sym = StandardCtrlSrf_4294600060
+	srfN = srfAttach,sweptWing_4294608126
 	EVENTS
 	{
 	}
@@ -1874,8 +1720,8 @@ PART
 	{
 		name = ModuleControlSurface
 		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
+		ignorePitch = True
+		ignoreYaw = True
 		ignoreRoll = False
 		deploy = False
 		deployInvert = False
@@ -1920,6 +1766,506 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = MCSFix
+		isEnabled = True
+		deploy = False
+		deployInvert = False
+		Authority = 1
+		Authority_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0.1
+			maxValue = 1.9
+			stepIncrement = 0.1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 400
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = sweptWing_4294608016
+	partName = Part
+	pos = 0.6591128,3.593048,-3.503042
+	attPos = 0,-0.4524883,5.394089E-08
+	attPos0 = 0.6192093,1.105842,-1.318267E-07
+	rot = -0.7071071,-9.835186E-09,1.123822E-08,-0.7071066
+	attRot = 0,0,0,1
+	attRot0 = -3.371748E-07,9.920943E-10,1.490115E-08,-1
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = StandardCtrlSrf_4294600060
+	sym = sweptWing_4294608126
+	srfN = srfAttach,fuelTank.long_4294621328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 620
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4294600060
+	partName = Part
+	pos = 3.653519,3.593049,-5.622589
+	attPos = 0,0,0
+	attPos0 = 2.994406,-2.119544,7.223666E-07
+	rot = 0.1657424,0.6874076,0.6874079,-0.1657434
+	attRot = 0,0,-0.7071067,-0.7071067
+	attRot0 = -0.2343958,-0.9721413,2.015735E-07,5.752082E-07
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = StandardCtrlSrf_4294600104
+	srfN = srfAttach,sweptWing_4294608016
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		ignorePitch = True
+		ignoreYaw = True
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		ignorePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreRoll_UIFlight
+		{
+			controlEnabled = True
+		}
+		deploy_UIFlight
+		{
+			controlEnabled = True
+		}
+		deployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = MCSFix
+		isEnabled = True
+		deploy = False
+		deployInvert = False
+		Authority = 1
+		Authority_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0.1
+			maxValue = 1.9
+			stepIncrement = 0.1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 400
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = winglet3_4294604856
+	partName = Part
+	pos = 0.0399033,4.654922,-5.780718
+	attPos = 0,-0.247582,0.03893197
+	attPos0 = -2.020205E-07,-1.376733,-1.100806
+	rot = -0.5000004,0.4999998,0.4999999,-0.5000002
+	attRot = 0,0,0,1
+	attRot0 = -1.264406E-07,0.7071065,1.053671E-07,-0.7071071
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,fuelTank.long_4294621328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		ignorePitch = True
+		ignoreYaw = False
+		ignoreRoll = True
+		deploy = False
+		deployInvert = False
+		ignorePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreRoll_UIFlight
+		{
+			controlEnabled = True
+		}
+		deploy_UIFlight
+		{
+			controlEnabled = True
+		}
+		deployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = MCSFix
+		isEnabled = True
+		deploy = False
+		deployInvert = False
+		Authority = 1
+		Authority_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0.1
+			maxValue = 1.9
+			stepIncrement = 0.1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 600
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = R8winglet_4294604302
+	partName = Part
+	pos = -0.5188157,4.263019,-6.128596
+	attPos = 0.02224731,-0.5044904,0.3362928
+	attPos0 = -0.5809665,-1.467702,-1.006263
+	rot = 0.7071068,0,0,0.7071068
+	attRot = -0.6123725,-0.3535534,0.3535533,-0.6123726
+	attRot0 = -8.42937E-08,0.4999999,8.42937E-08,-0.8660254
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = R8winglet_4294604240
+	srfN = srfAttach,fuelTank.long_4294621328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		ignorePitch = False
+		ignoreYaw = True
+		ignoreRoll = True
+		deploy = False
+		deployInvert = False
+		ignorePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreRoll_UIFlight
+		{
+			controlEnabled = True
+		}
+		deploy_UIFlight
+		{
+			controlEnabled = True
+		}
+		deployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
 		name = MCSFix
 		isEnabled = True
 		deploy = False
@@ -1957,14 +2303,14 @@ PART
 }
 PART
 {
-	part = GooExperiment_4293442306
+	part = R8winglet_4294604240
 	partName = Part
-	pos = 0.2958433,10.62527,1.221913
-	attPos = 0,0,0
-	attPos0 = -0.4144484,0.3027498,-0.2392817
-	rot = -0.6646206,-0.3837188,-0.3205618,-0.5552293
-	attRot = 0,0,0,1
-	attRot0 = -0.07735131,-0.4980015,0.04465874,-0.8625641
+	pos = 0.5986227,4.263019,-6.128596
+	attPos = -0.02224731,-0.5044916,0.3362928
+	attPos0 = 0.5809665,-1.467702,-1.006263
+	rot = -3.090863E-08,0.7071068,0.7071068,-3.090862E-08
+	attRot = -0.6123725,-0.3535534,0.3535533,-0.6123726
+	attRot0 = -1.685874E-07,0.8660255,8.42937E-08,-0.5
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 0
@@ -1976,7 +2322,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,Mark1Cockpit_4293659058
+	sym = R8winglet_4294604302
+	srfN = srfAttach,fuelTank.long_4294621328
 	EVENTS
 	{
 	}
@@ -1988,476 +2335,30 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateGeneric
+		name = ModuleControlSurface
 		isEnabled = True
-		status = Locked
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		EVENTS
+		ignorePitch = False
+		ignoreYaw = True
+		ignoreRoll = True
+		deploy = False
+		deployInvert = False
+		ignorePitch_UIFlight
 		{
-			Toggle
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Toggle
-				guiName = Deploy
-				category = Toggle
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
+			controlEnabled = True
 		}
-		ACTIONS
+		ignoreYaw_UIFlight
 		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
+			controlEnabled = True
 		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		EVENTS
+		ignoreRoll_UIFlight
 		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CleanUpExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Restore
-				guiName = Restore
-				category = Restore
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
+			controlEnabled = True
 		}
-		ACTIONS
+		deploy_UIFlight
 		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
+			controlEnabled = True
 		}
-	}
-}
-PART
-{
-	part = sensorThermometer_4293436782
-	partName = Part
-	pos = 0.1732233,10.69607,0.707432
-	attPos = 0,0,0
-	attPos0 = 0.5370676,0.5757694,0.3100758
-	rot = -0.6123725,-0.3535533,-0.3535533,-0.6123726
-	attRot = 0,0,0,1
-	attRot0 = -2.107342E-08,-0.8660255,-4.214685E-08,0.4999999
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,science.module_4293444234
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnviroSensor
-		isEnabled = True
-		sensorActive = False
-		EVENTS
-		{
-			Toggle
-			{
-				active = True
-				guiActive = True
-				guiIcon = Toggle Display
-				guiName = Toggle Display
-				category = Toggle Display
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		EVENTS
-		{
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CollectDataExternalEvent
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = True
-				unfocusedRange = 1.5
-				externalToEVAOnly = True
-			}
-			ReviewDataEvent
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			CleanUpExperimentExternal
-			{
-				active = True
-				guiActive = False
-				guiIcon = Restore
-				guiName = Restore
-				category = Restore
-				guiActiveUnfocused = True
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = batteryPack_4293409616
-	partName = Part
-	pos = 0.173273,10.69604,0.2919937
-	attPos = 0,0,0
-	attPos0 = 0.5370177,0.1603325,0.3100472
-	rot = -0.6123725,-0.3535533,-0.3535533,-0.6123726
-	attRot = 0,0,0,1
-	attRot0 = -2.107342E-08,-0.8660255,-4.214685E-08,0.4999999
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,science.module_4293444234
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 100
-		defaultScale = 100
-		defaultTransformScale = (1, 1, 1)
-		DryCost = 80
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 100
-		maxAmount = 100
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = batteryPack_4293408460
-	partName = Part
-	pos = 0.1737279,10.69578,-0.2384694
-	attPos = 0,0,0
-	attPos0 = 0.5365627,-0.3701302,0.3097849
-	rot = -0.6123725,-0.3535533,-0.3535533,-0.6123726
-	attRot = 0,0,0,1
-	attRot0 = -2.107342E-08,-0.8660255,-4.214685E-08,0.4999999
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,science.module_4293444234
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 100
-		defaultScale = 100
-		defaultTransformScale = (1, 1, 1)
-		DryCost = 80
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 100
-		maxAmount = 100
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = mumech.MJ2.AR202_4293383900
-	partName = Part
-	pos = 0.3851678,10.29887,2.313788
-	attPos = 0,0,0
-	attPos0 = -0.3251238,1.394624,0.08711608
-	rot = 0.6802503,0.1930276,-0.01038859,0.7070305
-	attRot = 0,0,0,1
-	attRot0 = -0.01893645,0.1291453,-0.1438369,0.9809556
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,Mark1Cockpit_4293659058
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleCommand
-		isEnabled = True
-		controlSrcStatusText = 
-		EVENTS
-		{
-			MakeReference
-			{
-				active = True
-				guiActive = True
-				guiIcon = Control From Here
-				guiName = Control From Here
-				category = Control From Here
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			RenameVessel
-			{
-				active = True
-				guiActive = True
-				guiIcon = Rename Vessel
-				guiName = Rename Vessel
-				category = Rename Vessel
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = MechJebCore
-		isEnabled = True
-		running = True
-		running_UIFlight
+		deployInvert_UIFlight
 		{
 			controlEnabled = True
 		}
@@ -2466,63 +2367,15 @@ PART
 		}
 		ACTIONS
 		{
-			OnOrbitProgradeAction
+			ActionToggle
 			{
 				actionGroup = None
 			}
-			OnOrbitRetrogradeAction
+			ActionExtend
 			{
 				actionGroup = None
 			}
-			OnOrbitNormalAction
-			{
-				actionGroup = None
-			}
-			OnOrbitAntinormalAction
-			{
-				actionGroup = None
-			}
-			OnOrbitRadialInAction
-			{
-				actionGroup = None
-			}
-			OnOrbitRadialOutAction
-			{
-				actionGroup = None
-			}
-			OnKillRotationAction
-			{
-				actionGroup = None
-			}
-			OnDeactivateSmartASSAction
-			{
-				actionGroup = None
-			}
-			OnPanicAction
-			{
-				actionGroup = None
-			}
-			OnTranslatronOffAction
-			{
-				actionGroup = None
-			}
-			OnTranslatronKeepVertAction
-			{
-				actionGroup = None
-			}
-			OnTranslatronZeroSpeedAction
-			{
-				actionGroup = None
-			}
-			OnTranslatronPlusOneSpeedAction
-			{
-				actionGroup = None
-			}
-			OnTranslatronMinusOneSpeedAction
-			{
-				actionGroup = None
-			}
-			OnTranslatronToggleHSAction
+			ActionRetract
 			{
 				actionGroup = None
 			}
@@ -2530,41 +2383,34 @@ PART
 	}
 	MODULE
 	{
-		name = MechJebAR202
+		name = ModuleAGX
 		isEnabled = True
+		placeHolder = Hello World
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
 		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
 	}
 	MODULE
 	{
-		name = PilotRSASFix
+		name = MCSFix
 		isEnabled = True
-		minResponseLimit = 0.3
-		minClamp = 0.2
-		threshold = 0.3
-		minResponseLimit_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0.05
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		minClamp_UIFlight
+		deploy = False
+		deployInvert = False
+		Authority = 1
+		Authority_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0.1
-			maxValue = 0.3
-			stepIncrement = 0.01
-		}
-		threshold_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0.1
-			maxValue = 0.9
+			maxValue = 1.9
 			stepIncrement = 0.1
 		}
 		EVENTS
@@ -2580,8 +2426,399 @@ PART
 		isEnabled = True
 		currentScale = 100
 		defaultScale = 100
-		defaultTransformScale = (0.75, 0.75, 0.75)
-		DryCost = 750
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 640
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = GearFixed_4294584980
+	partName = Part
+	pos = -0.673643,3.290515,-4.755633
+	attPos = -0.09444362,0.9075761,0.3025321
+	attPos0 = -0.6191029,-1.506815,1.796263E-07
+	rot = 0.005555376,-1.465259E-08,4.478558E-08,0.9999847
+	attRot = 0,0,0,1
+	attRot0 = -0.7031677,2.130724E-08,4.202913E-08,0.7110242
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = GearFixed_4294580780
+	srfN = srfAttach,fuelTank.long_4294621328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingGearFixed
+		isEnabled = True
+		BrakeTorque = 30
+		brakesEngaged = False
+		brakesEnabled = True
+		BrakeTorque_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 30
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = GearFixed_4294580780
+	partName = Part
+	pos = 0.75345,3.290515,-4.755634
+	attPos = 0.09444362,0.9075751,0.3025321
+	attPos0 = 0.6191029,-1.506815,1.796263E-07
+	rot = 4.454274E-08,0.9999847,0.005555376,-5.836331E-08
+	attRot = 0,0,0,1
+	attRot0 = 7.276556E-08,0.7110242,-0.7031677,-9.772618E-09
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = GearFixed_4294584980
+	srfN = srfAttach,fuelTank.long_4294621328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingGearFixed
+		isEnabled = True
+		BrakeTorque = 30
+		brakesEngaged = False
+		brakesEnabled = True
+		BrakeTorque_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 30
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 100
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = radialLiquidEngine1-2_4294615258
+	partName = Part
+	pos = -0.8180363,3.593048,-5.629339
+	attPos = 0.3490623,0.5976052,-7.124007E-08
+	attPos0 = -1.207002,-2.070549,2.468287E-07
+	rot = 0.5000001,-0.5,-0.5000001,0.5
+	attRot = 0,0,0,1
+	attRot0 = 6.322028E-08,-0.7071068,-4.214685E-08,0.7071068
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = 2
+	sqor = 0
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = radialLiquidEngine1-2_4294580558
+	srfN = srfAttach,fuelTank.long_4294621328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		gimbalLock_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
 		EVENTS
 		{
 		}
@@ -2591,7 +2828,214 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleTripLogger
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = MGFix
+		isEnabled = True
+		gimbalRateIsActive = False
+		gimbalResponseSpeed = 10
+		gimbalRateIsActive_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalResponseSpeed_UIFlight
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 30
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 820
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = radialLiquidEngine1-2_4294580558
+	partName = Part
+	pos = 0.8978433,3.593048,-5.62934
+	attPos = -0.3490623,0.5976043,-7.123995E-08
+	attPos0 = 1.207002,-2.070549,2.468287E-07
+	rot = 0.5000002,0.5,0.5000001,0.4999999
+	attRot = 0,0,0,1
+	attRot0 = 6.322028E-08,0.7071068,4.214685E-08,0.7071068
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = 1
+	sqor = 0
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = radialLiquidEngine1-2_4294615258
+	srfN = srfAttach,fuelTank.long_4294621328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		gimbalLock_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
 		isEnabled = True
 		EVENTS
 		{
@@ -2599,368 +3043,241 @@ PART
 		ACTIONS
 		{
 		}
-		Log
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
 		{
-			flight = 0
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = MGFix
+		isEnabled = True
+		gimbalRateIsActive = False
+		gimbalResponseSpeed = 10
+		gimbalRateIsActive_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalResponseSpeed_UIFlight
+		{
+			controlEnabled = True
+			minValue = 1
+			maxValue = 30
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 820
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = airScoop_4294446526
+	partName = Part
+	pos = 0.03990353,2.821601,-4.962132
+	attPos = 0,-7.152557E-07,-0.1848326
+	attPos0 = 2.946725E-08,-0.8057356,0.9562786
+	rot = 2.528811E-07,1.004859E-14,4.371139E-08,1
+	attRot = 0,0,0,1
+	attRot0 = -0.7071066,3.090861E-08,3.09086E-08,0.707107
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,fuelTank.long_4294621328
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceIntake
+		isEnabled = True
+		intakeEnabled = True
+		EVENTS
+		{
+			Deactivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Close Intake
+				guiName = Close Intake
+				category = Close Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Open Intake
+				guiName = Open Intake
+				category = Open Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1000
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = GPOSpeedPump
+		isEnabled = True
+		PumpLevel = 0
+		AutoPump = False
+		AutoBalance = False
+		PumpLevel_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 16
+			stepIncrement = 1
+		}
+		AutoPump_UIFlight
+		{
+			controlEnabled = True
+		}
+		AutoBalance_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			ConfigurePump
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Pump Options
+				guiName = Pump Options
+				category = Pump Options
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
 		}
 	}
 	RESOURCE
 	{
-		name = ElectricCharge
-		amount = 5
-		maxAmount = 5
+		name = IntakeAir
+		amount = 0.6
+		maxAmount = 0.6
 		flowState = True
-		isTweakable = True
+		isTweakable = False
 		hideFlow = False
 		flowMode = Both
 	}
 }
 PART
 {
-	part = GearFree_4293618880
+	part = NBjetBasic0m_4285004968
 	partName = Part
-	pos = 2.054819,10.38599,1.92522
+	pos = 0.03990356,4.212261,-4.449932
 	attPos = 0,0,0
-	attPos0 = -3.750292,-0.7269704,1.257988E-06
-	rot = 4.214685E-08,-3.899868E-07,-2.384186E-07,-1
-	attRot = -0.4999999,-0.4999999,0.4999999,-0.4999999
-	attRot0 = -0.5000001,0.4999997,0.4999998,-0.5000004
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = GearFree_4293034294
-	srfN = srfAttach,wingConnector2_4293597490
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLandingGearFixed
-		isEnabled = True
-		BrakeTorque = 20
-		brakesEngaged = False
-		brakesEnabled = True
-		BrakeTorque_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 30
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-			EnableBrakes
-			{
-				active = False
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Enable brakes
-				guiName = Enable brakes
-				category = Enable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableBrakes
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Disable brakes
-				guiName = Disable brakes
-				category = Disable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			BrakesAction
-			{
-				actionGroup = Brakes
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSteering
-		isEnabled = True
-		steeringLocked = False
-		invertSteering = False
-		EVENTS
-		{
-			UnLockSteering
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Unlock Steering
-				guiName = Unlock Steering
-				category = Unlock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LockSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lock Steering
-				guiName = Lock Steering
-				category = Lock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			InvertSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Invert Steering
-				guiName = Invert Steering
-				category = Invert Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			InvertSteeringAction
-			{
-				actionGroup = None
-			}
-			LockSteeringAction
-			{
-				actionGroup = None
-			}
-			UnlockSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleSteeringAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 100
-		defaultScale = 100
-		defaultTransformScale = (1, 1, 1)
-		DryCost = 150
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = GearFree_4293034294
-	partName = Part
-	pos = -0.634236,10.38599,1.925221
-	attPos = 0,0,0
-	attPos0 = -3.750292,-0.7269719,-1.077784E-06
-	rot = -1.264406E-07,-4.968516E-07,-2.384187E-07,1
-	attRot = -0.4999999,-0.4999999,0.4999999,-0.4999999
-	attRot0 = -0.4999997,-0.5000004,0.5000001,0.4999998
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = GearFree_4293618880
-	srfN = srfAttach,wingConnector2_4293597778
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLandingGearFixed
-		isEnabled = True
-		BrakeTorque = 20
-		brakesEngaged = False
-		brakesEnabled = True
-		BrakeTorque_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 30
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-			EnableBrakes
-			{
-				active = False
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Enable brakes
-				guiName = Enable brakes
-				category = Enable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableBrakes
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Disable brakes
-				guiName = Disable brakes
-				category = Disable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			BrakesAction
-			{
-				actionGroup = Brakes
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSteering
-		isEnabled = True
-		steeringLocked = False
-		invertSteering = False
-		EVENTS
-		{
-			UnLockSteering
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Unlock Steering
-				guiName = Unlock Steering
-				category = Unlock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LockSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lock Steering
-				guiName = Lock Steering
-				category = Lock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			InvertSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Invert Steering
-				guiName = Invert Steering
-				category = Invert Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			InvertSteeringAction
-			{
-				actionGroup = None
-			}
-			LockSteeringAction
-			{
-				actionGroup = None
-			}
-			UnlockSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleSteeringAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 100
-		defaultScale = 100
-		defaultTransformScale = (1, 1, 1)
-		DryCost = 150
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = NBjetBasic0m_4294075838
-	partName = Part
-	pos = 0.7102917,10.38599,-2.70184
-	attPos = 0,0,0
-	attPos0 = 0,-0.6552508,7.811195E-08
-	rot = 0.7071068,0,0,0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
+	attPos0 = 5.587935E-08,-0.2935379,-0.6192132
+	rot = 0,-1.685874E-07,1,-4.030331E-07
+	attRot = 0,0,0,0.9999999
+	attRot0 = 2.849874E-07,0.7071067,0.7071069,-2.849874E-07
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 0
-	dstg = 1
+	dstg = 0
 	sidx = 0
 	sqor = 0
 	sepI = 0
-	attm = 0
+	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	attN = top,fuelTankSmall_4293643522
+	srfN = ,fuelTank.long_4294621328
 	EVENTS
 	{
 	}
@@ -3122,6 +3439,24 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleAGX
+		isEnabled = True
+		placeHolder = Hello World
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TOGGLE
+		{
+		}
+		HOLD
+		{
+		}
+	}
+	MODULE
+	{
 		name = TweakScale
 		isEnabled = True
 		currentScale = 0.625
@@ -3139,7 +3474,12 @@ PART
 	{
 		name = MGFix
 		isEnabled = True
+		gimbalRateIsActive = False
 		gimbalResponseSpeed = 10
+		gimbalRateIsActive_UIFlight
+		{
+			controlEnabled = True
+		}
 		gimbalResponseSpeed_UIFlight
 		{
 			controlEnabled = True
@@ -3162,142 +3502,6 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = airScoop_4293026948
-	partName = Part
-	pos = 0.6518264,11.2845,-1.270424
-	attPos = 0,0,0
-	attPos0 = -0.05846524,-0.3343332,-0.898511
-	rot = -6.029155E-14,3.371748E-07,-1,3.409687E-07
-	attRot = 0,0,0,-0.9999999
-	attRot0 = -2.411013E-07,-0.7071066,-0.7071071,2.411012E-07
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 1
-	dstg = 1
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,fuelTankSmall_4293644224
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleResourceIntake
-		isEnabled = True
-		intakeEnabled = True
-		EVENTS
-		{
-			Deactivate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Close Intake
-				guiName = Close Intake
-				category = Close Intake
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Activate
-			{
-				active = False
-				guiActive = True
-				guiIcon = Open Intake
-				guiName = Open Intake
-				category = Open Intake
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = TweakScale
-		isEnabled = True
-		currentScale = 100
-		defaultScale = 100
-		defaultTransformScale = (1, 1, 1)
-		DryCost = 1000
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = GPOSpeedPump
-		isEnabled = True
-		PumpLevel = 0
-		AutoPump = False
-		AutoBalance = False
-		PumpLevel_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 16
-			stepIncrement = 1
-		}
-		AutoPump_UIFlight
-		{
-			controlEnabled = True
-		}
-		AutoBalance_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-			ConfigurePump
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Pump Options
-				guiName = Pump Options
-				category = Pump Options
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = IntakeAir
-		amount = 0.6
-		maxAmount = 0.6
-		flowState = True
-		isTweakable = False
-		hideFlow = False
 		flowMode = Both
 	}
 }
